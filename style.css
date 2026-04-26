@@ -1,0 +1,37 @@
+.img-save-btn-group-overlay {
+  position: absolute !important;
+  z-index: 2147483647 !important;
+  display: none;
+  flex-direction: row;
+  gap: 3px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: auto;
+
+  transform: translateX(calc(-100% - 5px));
+}
+
+.save-btn-action,
+.settings-btn-action {
+  background: #222 !important;
+  color: white !important;
+  border: 1px solid #444 !important;
+  border-radius: 3px !important;
+  padding: 2px 5px !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  display: inline-block !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.save-btn-action:hover,
+.settings-btn-action:hover {
+  background: #000 !important;
+  border-color: #888 !important;
+  transform: scale(1.05);
+}

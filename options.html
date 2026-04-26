@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beállítások</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .note {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Mentési beállítások</h2>
+    <label for="folder">Mappa neve (a Letöltéseken belül):</label><br>
+    <input type="text" id="folder" placeholder="pl: mentett_kepek"><br>
+    <button id="save">Mentés</button>
+    <p class="note">Megjegyzés: A képek a böngésző alapértelmezett letöltési mappáján belül kerülnek mentésre.</p>
+    <script src="options.js"></script>
+</body>
+
+</html>
