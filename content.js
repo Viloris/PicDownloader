@@ -1,3 +1,24 @@
+let minImageWidth = 100;
+
+const cleanupFloatingButtons = () => {
+  const overlays = document.querySelectorAll('.img-save-btn-group-overlay');
+  overlays.forEach(el => el.remove());
+};
+
+const loadSettings = () => {
+  chrome.storage.sync.get({ minImageWidth: 100 }, (items) => {
+    minImageWidth = parseInt(items.minImageWidth, 10) || 100;
+  });
+};
+
+loadSettings();
+
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === 'sync' && changes.minImageWidth) {
+    minImageWidth = parseInt(changes.minImageWidth.newValue, 10) || 100;
+  }
+});
+
 const addButtonsToImage = (img) => {
   if (img.classList.contains('processed-image')) return;
   img.classList.add('processed-image');
@@ -5,10 +26,18 @@ const addButtonsToImage = (img) => {
   const btnGroup = document.createElement('div');
   btnGroup.className = 'img-save-btn-group-overlay';
 
-  btnGroup.innerHTML = `
-    <button class="save-btn-action" title="Mentés">💾</button>
-    <button class="settings-btn-action" title="Beállítások">⚙️</button>
-  `;
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'save-btn-action';
+  saveBtn.title = 'Mentés';
+  saveBtn.textContent = '💾';
+
+  const settingsBtn = document.createElement('button');
+  settingsBtn.className = 'settings-btn-action';
+  settingsBtn.title = 'Beállítások';
+  settingsBtn.textContent = '⚙️';
+
+  btnGroup.appendChild(saveBtn);
+  btnGroup.appendChild(settingsBtn);
 
   document.body.appendChild(btnGroup);
 
@@ -34,7 +63,7 @@ const addButtonsToImage = (img) => {
   };
 
   const hideButtons = (e) => {
-    if (!btnGroup.contains(e.relatedTarget)) {
+    if (!e.relatedTarget || !btnGroup.contains(e.relatedTarget)) {
       btnGroup.style.opacity = '0';
       btnGroup.style.visibility = 'hidden';
     }
@@ -44,28 +73,52 @@ const addButtonsToImage = (img) => {
   img.addEventListener('mouseleave', hideButtons);
   btnGroup.addEventListener('mouseleave', hideButtons);
 
-  // Gomb események
-  btnGroup.querySelector('.save-btn-action').onclick = (e) => {
+  btnGroup.querySelector('.save-btn-action').onclick = function (e) {
     e.preventDefault();
-    const btn = e.target;
-    const originalIcon = btn.innerHTML;
+    const btn = e.currentTarget;
+    const originalIcon = btn.textContent;
 
-    chrome.runtime.sendMessage({ action: "downloadImage", url: img.src });
+    chrome.runtime.sendMessage({ action: "downloadImage", url: img.src }, (response) => {
+      if (response && response.status === 'success') {
+        btn.textContent = '✅';
+      } else {
+        btn.textContent = '❌';
+        console.error('Image download failed:', response && response.message ? response.message : 'unknown error');
+      }
 
-    btn.innerHTML = '✅';
-    setTimeout(() => {
-      btn.innerHTML = originalIcon;
-    }, 2000);
+      setTimeout(() => {
+        btn.textContent = originalIcon;
+      }, 2000);
+    });
   };
 
   btnGroup.querySelector('.settings-btn-action').onclick = (e) => {
     e.preventDefault();
-    browser.runtime.sendMessage({ action: "openOptions" });
+    chrome.runtime.sendMessage({ action: "openOptions" });
   };
 };
 
+const getImageWidth = (img) => img.naturalWidth || img.width || img.clientWidth || img.getBoundingClientRect().width;
+
 document.addEventListener('mouseover', (e) => {
   if (e.target.tagName === 'IMG') {
-    addButtonsToImage(e.target);
+    const imageWidth = getImageWidth(e.target);
+    if (imageWidth >= minImageWidth) {
+      addButtonsToImage(e.target);
+    }
   }
 }, true);
+
+
+window.addEventListener('popstate', cleanupFloatingButtons); // Vissza/Előre gomb
+window.addEventListener('beforeunload', cleanupFloatingButtons); // Oldal elhagyása
+
+// SPA támogatás: Ha az URL megváltozik (pl. YouTube, Facebook)
+let lastUrl = location.href;
+new MutationObserver(() => {
+  const url = location.href;
+  if (url !== lastUrl) {
+    lastUrl = url;
+    cleanupFloatingButtons();
+  }
+}).observe(document, { subtree: true, childList: true });

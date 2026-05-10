@@ -1,0 +1,82 @@
+{
+    "extensionName": {
+        "message": "Kép mentő",
+        "description": "Bővítmény neve"
+    },
+    "extensionDescription": {
+        "message": "Képeket ment gyorsan az aktuális oldalról.",
+        "description": "Bővítmény leírása"
+    },
+    "optionsPageTitle": {
+        "message": "Beállítások",
+        "description": "Beállítások oldal címe"
+    },
+    "optionsHeader": {
+        "message": "Beállítások",
+        "description": "Beállítások oldal fejléc"
+    },
+    "saveLocationHeader": {
+        "message": "Mentés helye",
+        "description": "Mentés helye szekció címe"
+    },
+    "folderLabel": {
+        "message": "Mappa neve (a Letöltéseken belül):",
+        "description": "Mappa név címke"
+    },
+    "folderPlaceholder": {
+        "message": "pl. mentett_kepek",
+        "description": "Mappa név helykitöltő"
+    },
+    "folderNote": {
+        "message": "Megjegyzés: A képek a böngésző alapértelmezett letöltési mappáján belül kerülnek mentésre. Ha nincs megadva mappa név, akkor a képek közvetlenül a letöltési mappába lesznek mentve.",
+        "description": "Mappa megjegyzés"
+    },
+    "folderToDownload": {
+        "message": "MentettKepek",
+        "description": "Alapértelmezett mappa név a letöltésekhez"
+    },
+    "smallImageFilterHeader": {
+        "message": "Kis képek szűrése",
+        "description": "Kis képek szűrése szekció címe"
+    },
+    "minWidthLabel": {
+        "message": "Minimális kép szélesség (px):",
+        "description": "Minimális szélesség címke"
+    },
+    "minWidthNote": {
+        "message": "A mentés ikon csak a megadott szélességnél nagyobb képeknél jelenik meg.",
+        "description": "Minimális szélesség megjegyzés"
+    },
+    "filenameConflictHeader": {
+        "message": "Fájlnév ütközés kezelése",
+        "description": "Fájlnév ütközés kezelése szekció címe"
+    },
+    "conflictLabel": {
+        "message": "Átnevezés fájlnév ütközés esetén",
+        "description": "Fájlnév ütközés címke"
+    },
+    "conflictNote": {
+        "message": "Ha be van jelölve, akkor a böngésző automatikusan egyedi fájlnevet generál, ha már létezik egy azonos nevű fájl. Ha nincs bejelölve, akkor a már létező fájl felül lesz írva.",
+        "description": "Fájlnév ütközési megjegyzés"
+    },
+    "saveButton": {
+        "message": "Beállítások mentése",
+        "description": "Beállítások mentése gomb szövege"
+    },
+    "restoreDefaultsButton": {
+        "message": "Alapértelmezések visszaállítása",
+        "description": "Alapértelmezés visszaállítása gomb szövege"
+    },
+    "closeButtonTitle": {
+        "message": "Bezárás",
+        "description": "Bezárás gomb leírása"
+    },
+    "settingsSaved": {
+        "message": "✅ Beállítások elmentve!",
+        "description": "Állapot üzenet beállítások mentése után"
+    },
+    "defaultsRestored": {
+        "message": "✅ Alapértelmezett beállítások visszaállítva!",
+        "description": "Állapot üzenet alapértelmezett visszaállítása után"
+    }
+}

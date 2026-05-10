@@ -1,0 +1,82 @@
+{
+    "extensionName": {
+        "message": "Image Saver",
+        "description": "Extension name"
+    },
+    "extensionDescription": {
+        "message": "Save images quickly from the current page.",
+        "description": "Extension description"
+    },
+    "optionsPageTitle": {
+        "message": "Settings",
+        "description": "Options page title"
+    },
+    "optionsHeader": {
+        "message": "Save settings",
+        "description": "Options page header"
+    },
+    "saveLocationHeader": {
+        "message": "Save location",
+        "description": "Save location section header"
+    },
+    "folderLabel": {
+        "message": "Folder name (inside Downloads):",
+        "description": "Folder name label"
+    },
+    "folderPlaceholder": {
+        "message": "e.g. saved_images",
+        "description": "Folder name placeholder"
+    },
+    "folderNote": {
+        "message": "Note: Images are saved inside the browser's default downloads folder. If no folder name is provided, images will be saved directly in the downloads folder.",
+        "description": "Folder note"
+    },
+    "folderToDownload": {
+        "message": "SavedPictures",
+        "description": "Default folder name for downloads"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filter small images",
+        "description": "Small image filter section header"
+    },
+    "minWidthLabel": {
+        "message": "Minimum image width (px):",
+        "description": "Minimum image width label"
+    },
+    "minWidthNote": {
+        "message": "The save icon appears only for images wider than the selected value.",
+        "description": "Minimum image note"
+    },
+    "filenameConflictHeader": {
+        "message": "Filename conflict handling",
+        "description": "Filename conflict section header"
+    },
+    "conflictLabel": {
+        "message": "Rename on filename conflict",
+        "description": "Filename conflict label"
+    },
+    "conflictNote": {
+        "message": "If checked, the browser will generate a unique filename when a file already exists. If unchecked, the existing file will be overwritten.",
+        "description": "Filename conflict note"
+    },
+    "saveButton": {
+        "message": "Save settings",
+        "description": "Save settings button text"
+    },
+    "restoreDefaultsButton": {
+        "message": "Restore defaults",
+        "description": "Restore defaults button text"
+    },
+    "closeButtonTitle": {
+        "message": "Close",
+        "description": "Close button title"
+    },
+    "settingsSaved": {
+        "message": "✅ Settings saved!",
+        "description": "Status message after saving settings"
+    },
+    "defaultsRestored": {
+        "message": "✅ Default settings restored!",
+        "description": "Status message after restoring defaults"
+    }
+}
