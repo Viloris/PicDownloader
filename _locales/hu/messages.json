@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Kép mentő",
+        "message": "Image Saver",
         "description": "Bővítmény neve"
     },
     "extensionDescription": {
@@ -28,7 +28,7 @@
         "description": "Mappa név helykitöltő"
     },
     "folderNote": {
-        "message": "Megjegyzés: A képek a böngésző alapértelmezett letöltési mappáján belül kerülnek mentésre. Ha nincs megadva mappa név, akkor a képek közvetlenül a letöltési mappába lesznek mentve.",
+        "message": "Megjegyzés: A képek a böngésző alapértelmezett letöltési mappáján belül a megadott mappába kerülnek mentésre. Ha nincs megadva mappa név, akkor a képek közvetlenül a letöltési mappába lesznek mentve.",
         "description": "Mappa megjegyzés"
     },
     "folderToDownload": {
@@ -78,5 +78,17 @@
     "defaultsRestored": {
         "message": "✅ Alapértelmezett beállítások visszaállítva!",
         "description": "Állapot üzenet alapértelmezett visszaállítása után"
+    },
+    "contactText": {
+        "message": "(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/yourusername/image-saver\" target=\"_blank\">GitHub</a>)",
+        "description": "Kapcsolatfelvétel szöveg"
+    },
+    "aboutHeader": {
+        "message": "Névjegy",
+        "description": "Névjegy szekció címe"
+    },
+    "aboutText": {
+        "message": "Fejlesztő: Silvio&nbsp;(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/yourusername/image-saver\" target=\"_blank\">GitHub</a>)",
+        "description": "Névjegy szekció szövege"
     }
 }

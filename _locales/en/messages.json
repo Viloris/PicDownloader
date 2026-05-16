@@ -78,5 +78,17 @@
     "defaultsRestored": {
         "message": "✅ Default settings restored!",
         "description": "Status message after restoring defaults"
+    },
+    "contactText": {
+        "message": "(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/viloris/picdownloader\" target=\"_blank\">GitHub</a>)",
+        "description": "Contact text"
+    },
+    "aboutHeader": {
+        "message": "About",
+        "description": "About section header"
+    },
+    "aboutText": {
+        "message": "Developed by Silvio&nbsp;(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/viloris/picdownloader\" target=\"_blank\">GitHub</a>)",
+        "description": "About section text"
     }
 }

@@ -1,4 +1,4 @@
-let minImageWidth = 100;
+let minImageWidth = PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
 
 const cleanupFloatingButtons = () => {
   const overlays = document.querySelectorAll('.img-save-btn-group-overlay');
@@ -6,8 +6,8 @@ const cleanupFloatingButtons = () => {
 };
 
 const loadSettings = () => {
-  chrome.storage.sync.get({ minImageWidth: 100 }, (items) => {
-    minImageWidth = parseInt(items.minImageWidth, 10) || 100;
+  chrome.storage.sync.get({ minImageWidth: PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth }, (items) => {
+    minImageWidth = parseInt(items.minImageWidth, 10) || PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
   });
 };
 
@@ -15,7 +15,7 @@ loadSettings();
 
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync' && changes.minImageWidth) {
-    minImageWidth = parseInt(changes.minImageWidth.newValue, 10) || 100;
+    minImageWidth = parseInt(changes.minImageWidth.newValue, 10) || PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
   }
 });
 

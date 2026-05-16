@@ -1,11 +1,9 @@
-const defaultSettings = {
-    downloadFolder: 'mentett_kepek',
-    minImageWidth: 100,
-    conflictAction: 'uniquify'
-};
+let statusTimeoutId = null;
+const UNIQUIFY = PicDownloaderConfig.CONFLICT_ACTIONS.UNIQUIFY;
+const CONFLICT = PicDownloaderConfig.CONFLICT_ACTIONS.OVERWRITE;
+const defaultSettings = PicDownloaderConfig.DEFAULT_SETTINGS;
 
 const getMessage = (key) => chrome.i18n.getMessage(key);
-let statusTimeoutId = null;
 
 const localizePage = () => {
     document.title = getMessage('optionsPageTitle');
@@ -23,6 +21,9 @@ const localizePage = () => {
     document.getElementById('saveSettings').textContent = getMessage('saveButton');
     document.getElementById('restoreDefaults').textContent = getMessage('restoreDefaultsButton');
     document.getElementById('closeBtn').title = getMessage('closeButtonTitle');
+    document.getElementById('aboutHeader').textContent = getMessage('aboutHeader');
+    document.getElementById('aboutText').innerHTML = getMessage('aboutText');
+    document.getElementById('contactText').innerHTML = getMessage('contactText');
 };
 
 const showStatusMessage = (message) => {
@@ -42,7 +43,7 @@ const showStatusMessage = (message) => {
 const saveOptions = () => {
     const folder = document.getElementById('folder').value;
     const minWidth = parseInt(document.getElementById('minWidth').value, 10) || defaultSettings.minImageWidth;
-    const conflictAction = document.getElementById('conflict').checked ? 'uniquify' : 'overwrite';
+    const conflictAction = document.getElementById('conflict').checked ? UNIQUIFY : CONFLICT;
     chrome.storage.sync.set({ downloadFolder: folder, minImageWidth: minWidth, conflictAction: conflictAction }, () => {
         showStatusMessage(getMessage('settingsSaved'));
     });
@@ -50,16 +51,16 @@ const saveOptions = () => {
 
 const restoreOptions = () => {
     chrome.storage.sync.get(defaultSettings, (items) => {
-        document.getElementById('folder').value = items.downloadFolder;
-        document.getElementById('minWidth').value = items.minImageWidth;
-        document.getElementById('conflict').checked = items.conflictAction === 'uniquify';
+        document.getElementById('folder').value = items.downloadFolder || defaultSettings.downloadFolder;
+        document.getElementById('minWidth').value = items.minImageWidth || defaultSettings.minImageWidth;
+        document.getElementById('conflict').checked = items.conflictAction === UNIQUIFY;
     });
 };
 
 const restoreDefaults = () => {
     document.getElementById('folder').value = defaultSettings.downloadFolder;
     document.getElementById('minWidth').value = defaultSettings.minImageWidth;
-    document.getElementById('conflict').checked = defaultSettings.conflictAction === 'uniquify';
+    document.getElementById('conflict').checked = defaultSettings.conflictAction === UNIQUIFY;
     chrome.storage.sync.set(defaultSettings, () => {
         showStatusMessage(getMessage('defaultsRestored'));
     });
@@ -71,7 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.getElementById('saveSettings').addEventListener('click', saveOptions);
 document.getElementById('restoreDefaults').addEventListener('click', restoreDefaults);
-document.getElementById('closeBtn').addEventListener('click', () => {
-    window.close();
-});
+document.getElementById('closeBtn').addEventListener('click', () => window.close());
 
