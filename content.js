@@ -36,11 +36,22 @@ const addButtonsToImage = (img) => {
   settingsBtn.title = 'Beállítások';
   settingsBtn.textContent = '⚙️';
 
+  const IMAGE_EXTENSIONS = /\.(jpe?g|png|gif|webp|bmp|svg|tiff?|avif|ico)(\?.*)?$/i;
+  const parentLink = img.closest('a');
+  const linkHref = parentLink?.href;
+  const isImageLink = linkHref && IMAGE_EXTENSIONS.test(linkHref);
+
+  if (isImageLink) {
+    const saveLinkBtn = document.createElement('button');
+    saveLinkBtn.className = 'save-link-btn-action';
+    saveLinkBtn.title = 'Linkelt kép mentése';
+    saveLinkBtn.textContent = '🔗';
+    btnGroup.appendChild(saveLinkBtn);
+  }
+
   btnGroup.appendChild(saveBtn);
   btnGroup.appendChild(settingsBtn);
-
   document.body.appendChild(btnGroup);
-
   const updatePosition = () => {
     const rect = img.getBoundingClientRect();
     const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -72,6 +83,7 @@ const addButtonsToImage = (img) => {
   img.addEventListener('mouseenter', showButtons);
   img.addEventListener('mouseleave', hideButtons);
   btnGroup.addEventListener('mouseleave', hideButtons);
+  showButtons();
 
   btnGroup.querySelector('.save-btn-action').onclick = function (e) {
     e.preventDefault();
@@ -86,12 +98,27 @@ const addButtonsToImage = (img) => {
         console.error('Image download failed:', response && response.message ? response.message : 'unknown error');
       }
 
-      setTimeout(() => {
-        btn.textContent = originalIcon;
-      }, 2000);
+      setTimeout(() => { btn.textContent = originalIcon; }, 2000);
     });
   };
 
+  const saveLinkBtnEl = btnGroup.querySelector('.save-link-btn-action');
+  if (saveLinkBtnEl) {
+    saveLinkBtnEl.onclick = function (e) {
+      e.preventDefault();
+      const btn = e.currentTarget;
+      const originalIcon = btn.textContent;
+      chrome.runtime.sendMessage({ action: "downloadImage", url: linkHref }, (response) => {
+        if (response && response.status === 'success') {
+          btn.textContent = '✅';
+        } else {
+          btn.textContent = '❌';
+          console.error('Link image download failed:', response && response.message ? response.message : 'unknown error');
+        }
+        setTimeout(() => { btn.textContent = originalIcon; }, 2000);
+      });
+    };
+  }
   btnGroup.querySelector('.settings-btn-action').onclick = (e) => {
     e.preventDefault();
     chrome.runtime.sendMessage({ action: "openOptions" });
@@ -109,11 +136,8 @@ document.addEventListener('mouseover', (e) => {
   }
 }, true);
 
-
-window.addEventListener('popstate', cleanupFloatingButtons); // Vissza/Előre gomb
-window.addEventListener('beforeunload', cleanupFloatingButtons); // Oldal elhagyása
-
-// SPA támogatás: Ha az URL megváltozik (pl. YouTube, Facebook)
+window.addEventListener('popstate', cleanupFloatingButtons);
+window.addEventListener('beforeunload', cleanupFloatingButtons);
 let lastUrl = location.href;
 new MutationObserver(() => {
   const url = location.href;
