@@ -73,7 +73,7 @@ Suggested license: MIT. I can add a `LICENSE` file if you want.
 ---
 
 If you'd like, I can add screenshots, more detailed installation examples, or a sample `LICENSE` file.
- 
+
 **Screenshots**
 Below are example screenshots — replace these placeholders with real captures if you have them.
 
@@ -102,27 +102,25 @@ web-ext build --overwrite-dest
 ```
 
 - Manual install steps (Firefox):
-	1. Open `about:debugging` in Firefox.
-	2. Click "This Firefox" (or "This Nightly").
-	3. Click "Load Temporary Add-on" and select `manifest.json` from this project.
+  1.  Open `about:debugging` in Firefox.
+  2.  Click "This Firefox" (or "This Nightly").
+  3.  Click "Load Temporary Add-on" and select `manifest.json` from this project.
 
 - Manual install steps (Chrome/Edge):
-	1. Open the Extensions page (`chrome://extensions/` or `edge://extensions/`).
-	2. Enable "Developer mode".
-	3. Click "Load unpacked" and select this project's folder.
+  1.  Open the Extensions page (`chrome://extensions/` or `edge://extensions/`).
+  2.  Enable "Developer mode".
+  3.  Click "Load unpacked" and select this project's folder.
 
 **Examples & usage scenarios**
 
 - Quick save with modifier key:
-
-	1. Configure `triggerModifier` in `config.js` (default: `ctrl`).
-	2. Configure `triggerButton` (`left` by default).
-	3. Hold `ctrl` and left-click an image to download it to the browser's default download folder (or the configured `downloadFolder`).
+  1.  Configure `triggerModifier` in `config.js` (default: `ctrl`).
+  2.  Configure `triggerButton` (`left` by default).
+  3.  Hold `ctrl` and left-click an image to download it to the browser's default download folder (or the configured `downloadFolder`).
 
 - On-image download button:
-
-	1. Enable `showDownloadButtons` in `config.js` or via the Options page.
-	2. Hover an image to see the download button and click it to save.
+  1.  Enable `showDownloadButtons` in `config.js` or via the Options page.
+  2.  Hover an image to see the download button and click it to save.
 
 **Advanced configuration example**
 
@@ -130,15 +128,15 @@ You can edit `config.js` to change default behaviour. Example snippet:
 
 ```js
 window.PicDownloaderConfig = {
-	DEFAULT_SETTINGS: {
-		downloadFolder: 'my_saved_images',
-		minImageWidth: 150,
-		conflictAction: 'uniquify',
-		triggerModifier: 'ctrl',
-		triggerButton: 'left',
-		showDownloadButtons: true
-	}
-}
+  DEFAULT_SETTINGS: {
+    downloadFolder: "my_saved_images",
+    minImageWidth: 150,
+    conflictAction: "uniquify",
+    triggerModifier: "ctrl",
+    triggerButton: "left",
+    showDownloadButtons: true,
+  },
+};
 ```
 
 **Contributing**
@@ -153,4 +151,4 @@ This project is available under the MIT License — see the `LICENSE` file.
 
 ---
 
-If you want, I can capture real screenshots from a running instance and insert them into `images/`, or further expand the README with example option values and expected filenames. 
+If you want, I can capture real screenshots from a running instance and insert them into `images/`, or further expand the README with example option values and expected filenames.
