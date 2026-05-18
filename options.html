@@ -4,218 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>__MSG_optionsPageTitle__</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            padding-bottom: 10px;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #7f8c8d;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 50%;
-            width: 35px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .close-btn:hover {
-            background: rgba(127, 140, 141, 0.1);
-            color: #34495e;
-        }
-
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 5px;
-            font-weight: 600;
-            font-size: 2.8em;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: 500;
-            font-size: 1.8em;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h3 {
-            color: #34495e;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            font-weight: 500;
-            font-size: 1.3em;
-            border-bottom: 2px solid transparent;
-            border-image: linear-gradient(to right, #e3e1e1 0%, #f4f5f6 100%) 1;
-            padding-bottom: 8px;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            padding: 12px 16px;
-            margin-bottom: 15px;
-            border: 2px solid #e1e8ed;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-            box-sizing: border-box;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-            background: white;
-        }
-
-        label {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-weight: 500;
-            color: #2c3e50;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #3498db;
-            cursor: pointer;
-        }
-
-        button {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        #saveSettings {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
-            color: white;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-        }
-
-        #saveSettings:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-        }
-
-        #restoreDefaults {
-            background: linear-gradient(135deg, #95a5a6, #bdc3c7);
-            color: #2c3e50;
-            box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
-        }
-
-        #restoreDefaults:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
-        }
-
-        .status-message {
-            color: #27ae60;
-            font-size: 1em;
-            font-weight: 500;
-            /* margin-top: 5px; */
-            min-height: 1.5em;
-            padding: 5px;
-            background: rgba(39, 174, 96, 0.1);
-            border-radius: 8px;
-            border-left: 4px solid #27ae60;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-
-        .status-message.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .note {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            font-style: italic;
-            margin-top: 5px;
-            line-height: 1.4;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            margin-bottom: 5px;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 20px;
-                margin: 10px;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            button {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="options.css">
 </head>
 
 <body>
     <div class="container">
         <button class="close-btn" id="closeBtn" title="Close">×</button>
-        <h1 id="extensionName">Image Saver</h1>
+        <h1 id="extensionName">Quick Image Saver</h1>
         <h2 id="optionsHeader">Save settings</h2>
 
         <div id="statusMessage" class="status-message" aria-live="polite"></div>
@@ -225,11 +20,6 @@
         <input type="text" id="folder" value="mentett_kepek" placeholder="e.g. saved_images">
         <p class="note" id="folderNote">Note: Images are saved inside the browser's default downloads folder.</p>
 
-        <h3 id="smallImageFilterHeader">Filter small images</h3>
-        <label for="minWidth" id="minWidthLabel">Minimum image width (px):</label>
-        <input type="number" id="minWidth" min="1" value="100">
-        <p class="note" id="minWidthNote">The save icon appears only for images wider than the selected value.</p>
-
         <h3 id="filenameConflictHeader">Filename conflict handling</h3>
         <label for="conflict">
             <input type="checkbox" id="conflict" name="conflict" checked />
@@ -238,13 +28,47 @@
         <p class="note" id="conflictNote">If checked, the browser will generate a unique filename when a file already
             exists. If unchecked, the existing file will be overwritten.</p>
 
+        <h3 id="smallImageFilterHeader">Filter small images</h3>
+        <label for="minWidth" id="minWidthLabel">Minimum image width (px):</label>
+        <input type="number" id="minWidth" min="1" value="100">
+        <p class="note" id="minWidthNote">The save icon appears only for images wider than the selected value.</p>
+
+        <h3 id="buttonDisplayHeader">Show download buttons</h3>
+        <label for="showButtons">
+            <input type="checkbox" id="showButtons" name="showButtons" checked />
+            <span id="buttonDisplayLabel">Show download buttons</span>
+        </label>
+        <p class="note" id="buttonDisplayNote">When disabled, the floating download buttons are hidden. Modifier+click
+            saving still works.</p>
+
+        <h3 id="modifierHeader">Save with modifier key</h3>
+        <div class="form-row">
+            <label for="modifierKey" id="modifierLabel">Modifier key:</label>
+            <select id="modifierKey">
+                <option value="ctrl">Ctrl</option>
+                <option value="alt">Alt</option>
+                <option value="shift">Shift</option>
+            </select>
+        </div>
+        <div class="form-row" style="margin-top:10px;">
+            <label for="clickButton" id="buttonLabel">Click button:</label>
+            <select id="clickButton">
+                <option value="left" id="leftClickOption">Left click</option>
+                <option value="right" id="rightClickOption">Right click</option>
+                <option value="both" id="bothClickOption">Left or right click</option>
+            </select>
+        </div>
+        <p class="note" id="modifierNote">The selected modifier+click combination saves the image directly when clicked.
+        </p>
+
         <div class="button-group">
             <button id="saveSettings">Save settings</button>
             <button id="restoreDefaults" type="button">Restore defaults</button>
         </div>
 
-        <h3 id="aboutHeader">__MSG_aboutHeader__</h3>
+        <h2 id="aboutHeader">__MSG_aboutHeader__</h2>
         <p class="about-text" id="aboutText">__MSG_aboutText__</p>
+        <p class="note" id="contactText"></p>
     </div>
     <script src="config.js"></script>
     <script src="options.js"></script>

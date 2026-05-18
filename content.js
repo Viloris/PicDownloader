@@ -1,4 +1,7 @@
 let minImageWidth = PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
+let triggerModifier = PicDownloaderConfig.DEFAULT_SETTINGS.triggerModifier;
+let triggerButton = PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton;
+let showDownloadButtons = PicDownloaderConfig.DEFAULT_SETTINGS.showDownloadButtons;
 
 const cleanupFloatingButtons = () => {
   const overlays = document.querySelectorAll('.img-save-btn-group-overlay');
@@ -6,18 +9,88 @@ const cleanupFloatingButtons = () => {
 };
 
 const loadSettings = () => {
-  chrome.storage.sync.get({ minImageWidth: PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth }, (items) => {
+  chrome.storage.sync.get({
+    minImageWidth: PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth,
+    triggerModifier: PicDownloaderConfig.DEFAULT_SETTINGS.triggerModifier,
+    triggerButton: PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton,
+    showDownloadButtons: PicDownloaderConfig.DEFAULT_SETTINGS.showDownloadButtons
+  }, (items) => {
     minImageWidth = parseInt(items.minImageWidth, 10) || PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
+    triggerModifier = items.triggerModifier || PicDownloaderConfig.DEFAULT_SETTINGS.triggerModifier;
+    triggerButton = items.triggerButton || PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton;
+    showDownloadButtons = typeof items.showDownloadButtons === 'boolean' ? items.showDownloadButtons : PicDownloaderConfig.DEFAULT_SETTINGS.showDownloadButtons;
+    if (!showDownloadButtons) {
+      cleanupFloatingButtons();
+    }
   });
 };
 
 loadSettings();
 
 chrome.storage.onChanged.addListener((changes, area) => {
-  if (area === 'sync' && changes.minImageWidth) {
-    minImageWidth = parseInt(changes.minImageWidth.newValue, 10) || PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
+  if (area === 'sync') {
+    if (changes.minImageWidth) {
+      minImageWidth = parseInt(changes.minImageWidth.newValue, 10) || PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
+    }
+    if (changes.triggerModifier) {
+      triggerModifier = changes.triggerModifier.newValue || PicDownloaderConfig.DEFAULT_SETTINGS.triggerModifier;
+    }
+    if (changes.triggerButton) {
+      triggerButton = changes.triggerButton.newValue || PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton;
+    }
+    if (changes.showDownloadButtons) {
+      showDownloadButtons = changes.showDownloadButtons.newValue;
+      if (!showDownloadButtons) {
+        cleanupFloatingButtons();
+      }
+    }
   }
 });
+
+const isModifierPressed = (e) => {
+  if (triggerModifier === 'alt') return e.altKey;
+  if (triggerModifier === 'shift') return e.shiftKey;
+  return e.ctrlKey;
+};
+
+const isTriggerButton = (buttonName) => {
+  return triggerButton === 'both' || triggerButton === buttonName;
+};
+
+const getButtonName = (eventButton) => {
+  if (eventButton === 0) return 'left';
+  if (eventButton === 2) return 'right';
+  return null;
+};
+
+const shouldSaveWithShortcut = (img, event) => {
+  if (!img || img.tagName !== 'IMG') return false;
+  if (!isModifierPressed(event)) return false;
+  const buttonName = getButtonName(event.button);
+  if (!buttonName || !isTriggerButton(buttonName)) return false;
+  const imageWidth = getImageWidth(img);
+  return imageWidth >= minImageWidth;
+};
+
+const saveImage = (url) => {
+  chrome.runtime.sendMessage({ action: 'downloadImage', url: url });
+};
+
+const onImageShortcutClick = (e) => {
+  if (shouldSaveWithShortcut(e.target, e)) {
+    e.preventDefault();
+    saveImage(e.target.src);
+  }
+};
+
+const onContextMenu = (e) => {
+  if (shouldSaveWithShortcut(e.target, e)) {
+    e.preventDefault();
+  }
+};
+
+document.addEventListener('mousedown', onImageShortcutClick, true);
+document.addEventListener('contextmenu', onContextMenu, true);
 
 const addButtonsToImage = (img) => {
   if (img.classList.contains('processed-image')) return;
@@ -52,6 +125,7 @@ const addButtonsToImage = (img) => {
   btnGroup.appendChild(saveBtn);
   btnGroup.appendChild(settingsBtn);
   document.body.appendChild(btnGroup);
+
   const updatePosition = () => {
     const rect = img.getBoundingClientRect();
     const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -128,6 +202,9 @@ const addButtonsToImage = (img) => {
 const getImageWidth = (img) => img.naturalWidth || img.width || img.clientWidth || img.getBoundingClientRect().width;
 
 document.addEventListener('mouseover', (e) => {
+  if (!showDownloadButtons) {
+    return;
+  }
   if (e.target.tagName === 'IMG') {
     const imageWidth = getImageWidth(e.target);
     if (imageWidth >= minImageWidth) {

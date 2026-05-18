@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Image Saver",
+        "message": "Quick Image Saver",
         "description": "Bővítmény neve"
     },
     "extensionDescription": {
@@ -79,16 +79,56 @@
         "message": "✅ Alapértelmezett beállítások visszaállítva!",
         "description": "Állapot üzenet alapértelmezett visszaállítása után"
     },
-    "contactText": {
-        "message": "(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/yourusername/image-saver\" target=\"_blank\">GitHub</a>)",
-        "description": "Kapcsolatfelvétel szöveg"
-    },
     "aboutHeader": {
         "message": "Névjegy",
         "description": "Névjegy szekció címe"
     },
     "aboutText": {
-        "message": "Fejlesztő: Silvio&nbsp;(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/yourusername/image-saver\" target=\"_blank\">GitHub</a>)",
+        "message": "Fejlesztő: Viloris",
         "description": "Névjegy szekció szövege"
+    },
+    "contactText": {
+        "message": "Email • GitHub",
+        "description": "Kapcsolat szekció szövege"
+    },
+    "modifierHeader": {
+        "message": "Mentés kattintásra",
+        "description": "Módosító billentyű szekció címe"
+    },
+    "modifierNote": {
+        "message": "Módosító billentyű, amit lenyomva kell tartani egy képre kattintáskor a mentés művelet kiváltásához.",
+        "description": "Módosító billentyű megjegyzés"
+    },
+    "modifierLabel": {
+        "message": "Módosító billentyű:",
+        "description": "Módosító billentyű címke"
+    },
+    "buttonLabel": {
+        "message": "Egér gomb:",
+        "description": "Kattintás gomb címke"
+    },
+    "buttonDisplayHeader": {
+        "message": "Letöltés gombok megjelenítése",
+        "description": "Szűrő a letöltés gombok megjelenítéséhez"
+    },
+    "buttonDisplayLabel": {
+        "message": "Letöltés gombok megjelenítése",
+        "description": "Címke a letöltés gombok megjelenítése beállításhoz"
+    },
+    "buttonDisplayNote": {
+        "message": "Ha ki van kapcsolva, a lebegő letöltés gombok nem jelennek meg. A módosító+kattintásos mentés továbbra is működik.",
+        "description": "Megjegyzés a gomb megjelenítési kapcsolóhoz"
+    },
+    "leftClickOption": {
+        "message": "Bal gomb",
+        "description": "Option for left click"
+    },
+    "rightClickOption": {
+        "message": "Jobb gomb",
+        "description": "Option for right click"
+    },
+    "bothClickOption": {
+        "message": "Középső gomb",
+        "description": "Option for middle/both clicks"
     }
 }

@@ -3,7 +3,7 @@
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
   "default_locale": "en",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "permissions": [
     "downloads",
     "activeTab",
@@ -13,6 +13,7 @@
     "<all_urls>"
   ],
   "background": {
+    "service_worker": "background.js",
     "scripts": [
       "config.js",
       "background.js"

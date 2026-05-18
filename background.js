@@ -1,25 +1,31 @@
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
+if (typeof importScripts === 'function' && typeof PicDownloaderConfig === 'undefined') {
+  importScripts('config.js');
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "downloadImage") {
-    browser.storage.sync.get(PicDownloaderConfig.DEFAULT_SETTINGS, (items) => {
-      const folder = items.downloadFolder.trim();
+    chrome.storage.sync.get(PicDownloaderConfig.DEFAULT_SETTINGS, (items) => {
+      const folder = (items.downloadFolder || '').trim();
       const rawFilename = request.url.split('/').pop().split('?')[0] || 'image.jpg';
       const filename = folder ? `${folder}/${rawFilename}` : rawFilename;
       const conflictAction = items.conflictAction || PicDownloaderConfig.CONFLICT_ACTIONS.UNIQUIFY;
 
-      browser.downloads.download({
+      chrome.downloads.download({
         url: request.url,
         filename: filename,
         conflictAction: conflictAction
-      }).then(() => {
-        sendResponse({ status: 'success' });
-      }).catch((error) => {
-        sendResponse({ status: 'error', message: error && error.message ? error.message : 'Download failed' });
+      }, (downloadId) => {
+        if (chrome.runtime.lastError) {
+          sendResponse({ status: 'error', message: chrome.runtime.lastError.message });
+        } else {
+          sendResponse({ status: 'success' });
+        }
       });
     });
     return true;
   }
 
   if (request.action === "openOptions") {
-    browser.runtime.openOptionsPage();
+    chrome.runtime.openOptionsPage();
   }
 });

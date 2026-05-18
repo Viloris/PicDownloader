@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Image Saver",
+        "message": "Quick Image Saver",
         "description": "Extension name"
     },
     "extensionDescription": {
@@ -79,16 +79,56 @@
         "message": "✅ Default settings restored!",
         "description": "Status message after restoring defaults"
     },
-    "contactText": {
-        "message": "(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/viloris/picdownloader\" target=\"_blank\">GitHub</a>)",
-        "description": "Contact text"
-    },
     "aboutHeader": {
         "message": "About",
         "description": "About section header"
     },
     "aboutText": {
-        "message": "Developed by Silvio&nbsp;(<a href=\"mailto:vilorisdeveloper@gmail.com\" target=\"_blank\">Email</a> &bull; <a href=\"https://github.com/viloris/picdownloader\" target=\"_blank\">GitHub</a>)",
+        "message": "Developed by Viloris",
         "description": "About section text"
+    },
+    "contactText": {
+        "message": "Email • GitHub",
+        "description": "Contact section text"
+    },
+    "modifierNote": {
+        "message": "Modifier key to hold when clicking an image to trigger the save action.",
+        "description": "Note about the modifier key setting"
+    },
+    "modifierHeader": {
+        "message": "Save with mouse click",
+        "description": "Modifier key section header"
+    },
+    "modifierLabel": {
+        "message": "Modifier key:",
+        "description": "Label for the modifier key setting"
+    },
+    "buttonLabel": {
+        "message": "Mouse button:",
+        "description": "Label for the click button setting"
+    },
+    "buttonDisplayHeader": {
+        "message": "Show download buttons",
+        "description": "Section header for showing or hiding the download buttons"
+    },
+    "buttonDisplayLabel": {
+        "message": "Show download buttons",
+        "description": "Label for the show/hide buttons setting"
+    },
+    "buttonDisplayNote": {
+        "message": "When disabled, the floating download buttons are hidden. Modifier+click saving still works.",
+        "description": "Note explaining the button display toggle"
+    },
+    "leftClickOption": {
+        "message": "Left click",
+        "description": "Option for left click"
+    },
+    "rightClickOption": {
+        "message": "Right click",
+        "description": "Option for right click"
+    },
+    "bothClickOption": {
+        "message": "Middle clicks",
+        "description": "Option for middle/both clicks"
     }
 }
