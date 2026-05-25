@@ -2,10 +2,14 @@ let minImageWidth = PicDownloaderConfig.DEFAULT_SETTINGS.minImageWidth;
 let triggerModifier = PicDownloaderConfig.DEFAULT_SETTINGS.triggerModifier;
 let triggerButton = PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton;
 let showDownloadButtons = PicDownloaderConfig.DEFAULT_SETTINGS.showDownloadButtons;
+let downloadImage = PicDownloaderConfig.ACTION.DOWNLOAD_IMAGE;
+let openOptions = PicDownloaderConfig.ACTION.OPEN_OPTIONS;
 
 const cleanupFloatingButtons = () => {
   const overlays = document.querySelectorAll('.img-save-btn-group-overlay');
   overlays.forEach(el => el.remove());
+  const processedImgs = document.querySelectorAll('img.processed-image');
+  processedImgs.forEach(img => img.classList.remove('processed-image'));
 };
 
 const loadSettings = () => {
@@ -73,7 +77,7 @@ const shouldSaveWithShortcut = (img, event) => {
 };
 
 const saveImage = (url) => {
-  chrome.runtime.sendMessage({ action: 'downloadImage', url: url });
+  chrome.runtime.sendMessage({ action: downloadImage, url: url });
 };
 
 const onImageShortcutClick = (e) => {
@@ -164,7 +168,7 @@ const addButtonsToImage = (img) => {
     const btn = e.currentTarget;
     const originalIcon = btn.textContent;
 
-    chrome.runtime.sendMessage({ action: "downloadImage", url: img.src }, (response) => {
+    chrome.runtime.sendMessage({ action: downloadImage, url: img.src }, (response) => {
       if (response && response.status === 'success') {
         btn.textContent = '✅';
       } else {
@@ -182,7 +186,7 @@ const addButtonsToImage = (img) => {
       e.preventDefault();
       const btn = e.currentTarget;
       const originalIcon = btn.textContent;
-      chrome.runtime.sendMessage({ action: "downloadImage", url: linkHref }, (response) => {
+      chrome.runtime.sendMessage({ action: downloadImage, url: linkHref }, (response) => {
         if (response && response.status === 'success') {
           btn.textContent = '✅';
         } else {
@@ -195,11 +199,14 @@ const addButtonsToImage = (img) => {
   }
   btnGroup.querySelector('.settings-btn-action').onclick = (e) => {
     e.preventDefault();
-    chrome.runtime.sendMessage({ action: "openOptions" });
+    chrome.runtime.sendMessage({ action: openOptions });
   };
 };
 
-const getImageWidth = (img) => img.naturalWidth || img.width || img.clientWidth || img.getBoundingClientRect().width;
+const getImageWidth = (img) => {
+  const rect = img.getBoundingClientRect();
+  return rect.width || img.clientWidth || img.width || img.naturalWidth;
+};
 
 document.addEventListener('mouseover', (e) => {
   if (!showDownloadButtons) {
