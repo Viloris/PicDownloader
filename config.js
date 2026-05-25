@@ -24,5 +24,9 @@ window.PicDownloaderConfig = {
         STATUS_SHOW_CLASS: 'show',
         STATUS_DISPLAY_MS: 4000,
         STATUS_CLEAR_MS: 300
+    },
+    ACTION: {
+        DOWNLOAD_IMAGE: 'downloadImage',
+        OPEN_OPTIONS: 'openOptions'
     }
 };
