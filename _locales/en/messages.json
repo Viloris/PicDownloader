@@ -100,15 +100,19 @@
         "description": "Explanation of the required permissions"
     },
     "permissionsHeader": {
-        "message": "Enable saving on websites",
+        "message": "License and permissions",
         "description": "Heading for the permissions section"
+    },
+    "licenseLink": {
+        "message": "MIT License",
+        "description": "Link to the extension license"
     },
     "grantPermissions": {
         "message": "Enable",
         "description": "Button to request permissions"
     },
     "permissionsGrantedHeader": {
-        "message": "Permissions",
+        "message": "License and permissions",
         "description": "Heading for granted permissions"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Could not request permissions. Please try again.",
         "description": "Error requesting permissions"
+    },
+    "extensionWebsite": {
+        "message": "Extension website",
+        "description": "Link to the extension website"
     },
     "contactText": {
         "message": "Email • GitHub",

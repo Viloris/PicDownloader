@@ -100,15 +100,19 @@
         "description": "A szükséges engedélyek magyarázata"
     },
     "permissionsHeader": {
-        "message": "Mentés engedélyezése a weboldalakon",
+        "message": "Licence és engedélyek",
         "description": "Az engedélyek szakasz címe"
+    },
+    "licenseLink": {
+        "message": "MIT licenc",
+        "description": "Hivatkozás a bővítmény licencére"
     },
     "grantPermissions": {
         "message": "Engedélyezés",
         "description": "Engedélykérő gomb"
     },
     "permissionsGrantedHeader": {
-        "message": "Engedélyek",
+        "message": "Licence és engedélyek",
         "description": "A megadott engedélyek szakaszának címe"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Nem sikerült engedélyt kérni. Próbáld újra.",
         "description": "Hiba az engedélykérés során"
+    },
+    "extensionWebsite": {
+        "message": "Bővítmény weboldala",
+        "description": "Hivatkozás a bővítmény weboldalára"
     },
     "contactText": {
         "message": "Email • GitHub",

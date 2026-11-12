@@ -100,15 +100,19 @@
         "description": "Spiegazione delle autorizzazioni necessarie"
     },
     "permissionsHeader": {
-        "message": "Consenti il salvataggio sui siti web",
+        "message": "Licenza e autorizzazioni",
         "description": "Titolo della sezione delle autorizzazioni"
+    },
+    "licenseLink": {
+        "message": "Licenza MIT",
+        "description": "Link alla licenza dell’estensione"
     },
     "grantPermissions": {
         "message": "Consenti",
         "description": "Pulsante per richiedere autorizzazioni"
     },
     "permissionsGrantedHeader": {
-        "message": "Autorizzazioni",
+        "message": "Licenza e autorizzazioni",
         "description": "Titolo delle autorizzazioni concesse"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Impossibile richiedere le autorizzazioni. Riprova.",
         "description": "Errore durante la richiesta delle autorizzazioni"
+    },
+    "extensionWebsite": {
+        "message": "Sito web dell’estensione",
+        "description": "Link al sito web dell’estensione"
     },
     "contactText": {
         "message": "Email • GitHub",

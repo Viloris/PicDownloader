@@ -100,15 +100,19 @@
         "description": "Explicación de los permisos necesarios"
     },
     "permissionsHeader": {
-        "message": "Permitir guardar en sitios web",
+        "message": "Licencia y permisos",
         "description": "Título de la sección de permisos"
+    },
+    "licenseLink": {
+        "message": "Licencia MIT",
+        "description": "Enlace a la licencia de la extensión"
     },
     "grantPermissions": {
         "message": "Permitir",
         "description": "Botón para solicitar permisos"
     },
     "permissionsGrantedHeader": {
-        "message": "Permisos",
+        "message": "Licencia y permisos",
         "description": "Título de los permisos concedidos"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "No se pudieron solicitar los permisos. Inténtalo de nuevo.",
         "description": "Error al solicitar permisos"
+    },
+    "extensionWebsite": {
+        "message": "Sitio web de la extensión",
+        "description": "Enlace al sitio web de la extensión"
     },
     "contactText": {
         "message": "Correo • GitHub",

@@ -100,15 +100,19 @@
         "description": "Wyjaśnienie wymaganych uprawnień"
     },
     "permissionsHeader": {
-        "message": "Zezwól na zapisywanie na stronach internetowych",
+        "message": "Licencja i uprawnienia",
         "description": "Nagłówek sekcji uprawnień"
+    },
+    "licenseLink": {
+        "message": "Licencja MIT",
+        "description": "Link do licencji rozszerzenia"
     },
     "grantPermissions": {
         "message": "Zezwól",
         "description": "Przycisk żądania uprawnień"
     },
     "permissionsGrantedHeader": {
-        "message": "Uprawnienia",
+        "message": "Licencja i uprawnienia",
         "description": "Nagłówek przyznanych uprawnień"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Nie udało się poprosić o uprawnienia. Spróbuj ponownie.",
         "description": "Błąd podczas żądania uprawnień"
+    },
+    "extensionWebsite": {
+        "message": "Strona internetowa rozszerzenia",
+        "description": "Link do strony internetowej rozszerzenia"
     },
     "contactText": {
         "message": "E-mail • GitHub",

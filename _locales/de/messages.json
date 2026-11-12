@@ -100,15 +100,19 @@
         "description": "Erklärung der benötigten Berechtigungen"
     },
     "permissionsHeader": {
-        "message": "Speichern auf Websites erlauben",
+        "message": "Lizenz und Berechtigungen",
         "description": "Überschrift des Berechtigungsbereichs"
+    },
+    "licenseLink": {
+        "message": "MIT-Lizenz",
+        "description": "Link zur Lizenz der Erweiterung"
     },
     "grantPermissions": {
         "message": "Erlauben",
         "description": "Schaltfläche zum Anfordern von Berechtigungen"
     },
     "permissionsGrantedHeader": {
-        "message": "Berechtigungen",
+        "message": "Lizenz und Berechtigungen",
         "description": "Überschrift der erteilten Berechtigungen"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Berechtigungen konnten nicht angefordert werden. Bitte versuche es erneut.",
         "description": "Fehler beim Anfordern von Berechtigungen"
+    },
+    "extensionWebsite": {
+        "message": "Webseite der Erweiterung",
+        "description": "Link zur Webseite der Erweiterung"
     },
     "contactText": {
         "message": "E-Mail • GitHub",

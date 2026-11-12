@@ -100,15 +100,19 @@
         "description": "Vysvetlenie potrebných povolení"
     },
     "permissionsHeader": {
-        "message": "Povoliť ukladanie na webových stránkach",
+        "message": "Licencia a povolenia",
         "description": "Nadpis sekcie povolení"
+    },
+    "licenseLink": {
+        "message": "Licencia MIT",
+        "description": "Odkaz na licenciu rozšírenia"
     },
     "grantPermissions": {
         "message": "Povoliť",
         "description": "Tlačidlo na vyžiadanie povolení"
     },
     "permissionsGrantedHeader": {
-        "message": "Povolenia",
+        "message": "Licencia a povolenia",
         "description": "Nadpis udelených povolení"
     },
     "permissionsGranted": {
@@ -122,6 +126,10 @@
     "permissionsError": {
         "message": "Povolenia sa nepodarilo vyžiadať. Skúste to znova.",
         "description": "Chyba pri žiadaní o povolenia"
+    },
+    "extensionWebsite": {
+        "message": "Webová stránka rozšírenia",
+        "description": "Odkaz na webovú stránku rozšírenia"
     },
     "contactText": {
         "message": "E-mail • GitHub",
