@@ -2,6 +2,17 @@ if (typeof importScripts === 'function' && typeof PicDownloaderConfig === 'undef
   importScripts('config.js');
 }
 
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason !== 'install' && details.reason !== 'update') return;
+
+  const updated = details.reason === 'update' ? '?updated=1' : '';
+  chrome.tabs.create({ url: chrome.runtime.getURL(`options/index.html${updated}#about`) }, () => {
+    if (chrome.runtime.lastError) {
+      console.error('Could not open the about page:', chrome.runtime.lastError.message);
+    }
+  });
+});
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "downloadImage") {
     chrome.storage.sync.get(PicDownloaderConfig.DEFAULT_SETTINGS, (items) => {

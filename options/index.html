@@ -1,17 +1,23 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PicDownloader</title>
+  <link rel="icon" type="image/svg+xml" href="../images/picdownloader.svg">
   <link rel="stylesheet" href="styles/settings.css">
   <script src="../config.js" defer></script>
   <script src="components/SettingsPage.js" defer></script>
 </head>
+
 <body>
   <div class="optionsPage">
     <nav class="sideBar" aria-label="PicDownloader">
-      <div class="titleContainer"><span class="logoTitle">PicDownloader</span></div>
+      <div class="titleContainer">
+        <img class="extensionIcon" src="../images/picdownloader.svg" alt="">
+        <span class="logoTitle">PicDownloader</span>
+      </div>
       <ul>
         <li class="sideBarItem selected"><a href="#settings" data-message="optionsPageTitle"></a></li>
         <li class="sideBarItem"><a href="#about" data-message="aboutHeader"></a></li>
@@ -56,7 +62,8 @@
                     <label for="minWidth" data-message="minWidthLabel"></label>
                     <p class="caption" id="minWidthNote" data-message="minWidthNote"></p>
                   </div>
-                  <div class="optionForm"><input type="number" id="minWidth" min="1" step="1" required aria-describedby="minWidthNote"></div>
+                  <div class="optionForm"><input type="number" id="minWidth" min="1" step="1" required
+                      aria-describedby="minWidthNote"></div>
                 </div>
               </div>
             </section>
@@ -68,7 +75,8 @@
                     <label for="showButtons" data-message="buttonDisplayLabel"></label>
                     <p class="caption" id="buttonDisplayNote" data-message="buttonDisplayNote"></p>
                   </div>
-                  <div class="optionForm"><input type="checkbox" id="showButtons" aria-describedby="buttonDisplayNote"></div>
+                  <div class="optionForm"><input type="checkbox" id="showButtons" aria-describedby="buttonDisplayNote">
+                  </div>
                 </div>
               </div>
             </section>
@@ -82,7 +90,9 @@
                   </div>
                   <div class="optionForm">
                     <select id="modifierKey" aria-describedby="modifierNote">
-                      <option value="ctrl">Ctrl</option><option value="alt">Alt</option><option value="shift">Shift</option>
+                      <option value="ctrl">Ctrl</option>
+                      <option value="alt">Alt</option>
+                      <option value="shift">Shift</option>
                     </select>
                   </div>
                 </div>
@@ -109,10 +119,38 @@
       <section id="about" hidden>
         <h1 class="contentTitle" data-message="aboutHeader"></h1>
         <hr>
-        <p data-message="aboutText"></p>
-        <p id="contactText"></p>
+        <section class="categoryContainer">
+          <div class="extensionHeading">
+            <h2 class="categoryTitle" data-message="extensionName"></h2>
+            <span id="updatedBadge" class="updatedBadge" hidden>UPDATED</span>
+          </div>
+          <div class="categoryElements extensionDetails">
+            <p id="extensionVersion" class="caption"></p>
+            <p class="caption" data-message="extensionDescription"></p>
+          </div>
+        </section>
+        <hr>
+        <section class="categoryContainer" aria-labelledby="permissionsHeader">
+          <h2 id="permissionsHeader" class="categoryTitle" data-message="permissionsHeader"></h2>
+          <div id="permissionsSection" class="categoryElements permissionsSection">
+            <p class="caption licenseLink"><a href="../LICENSE" target="_blank" rel="noopener noreferrer"
+                data-message="licenseLink"></a></p>
+            <div class="permissionsRow">
+              <div class="optionText">
+                <p id="permissionsNote" data-message="permissionsNote"></p>
+              </div>
+              <button type="button" id="grantPermissions" data-message="grantPermissions" hidden></button>
+            </div>
+            <p id="permissionsStatus" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+        <hr>
+        <section class="categoryContainer">
+          <p id="contactText"></p>
+        </section>
       </section>
     </main>
   </div>
 </body>
+
 </html>

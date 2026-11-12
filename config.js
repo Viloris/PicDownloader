@@ -28,5 +28,10 @@ window.PicDownloaderConfig = {
     ACTION: {
         DOWNLOAD_IMAGE: 'downloadImage',
         OPEN_OPTIONS: 'openOptions'
+    },
+    EXTENSION: {
+        CHROME_WEBSTORE_URL: 'https://chrome.google.com/webstore/detail/picdownloader/your-extension-id',
+        FIREFOX_ADDONS_URL: 'https://addons.mozilla.org/hu/firefox/addon/picdownloader/',
+        EDGE_ADDONS_URL: 'https://microsoftedge.microsoft.com/addons/detail/picdownloader/your-extension-id'
     }
 };

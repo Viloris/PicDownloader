@@ -1,4 +1,4 @@
-const { DEFAULT_SETTINGS, CONFLICT_ACTIONS, CONTACT, UI } = PicDownloaderConfig;
+const { DEFAULT_SETTINGS, CONFLICT_ACTIONS, CONTACT, EXTENSION, UI } = PicDownloaderConfig;
 const message = (key) => chrome.i18n.getMessage(key);
 const element = (id) => document.getElementById(id);
 let statusTimeout;
@@ -17,15 +17,63 @@ function showPage() {
 showPage();
 window.addEventListener('hashchange', showPage);
 
-document.title = `${message('optionsPageTitle')} - PicDownloader`;
+document.title = message('extensionName');
 document.documentElement.lang = chrome.i18n.getUILanguage();
 document.querySelectorAll('[data-message]').forEach((node) => {
   node.textContent = message(node.dataset.message);
 });
 element('folder').placeholder = message('folderPlaceholder');
+element('extensionVersion').textContent = `${message('versionLabel')} ${chrome.runtime.getManifest().version}`;
+element('updatedBadge').hidden = new URLSearchParams(location.search).get('updated') !== '1';
+
+const permissionRequest = {
+  permissions: ['downloads'],
+  origins: ['<all_urls>']
+};
+const grantPermissions = element('grantPermissions');
+const permissionsStatus = element('permissionsStatus');
+
+chrome.permissions.contains(permissionRequest, (granted) => {
+  if (chrome.runtime.lastError) {
+    grantPermissions.hidden = false;
+    console.error('Could not check extension permissions:', chrome.runtime.lastError.message);
+    permissionsStatus.textContent = message('permissionsError');
+    permissionsStatus.classList.add('error');
+    return;
+  }
+  grantPermissions.hidden = granted;
+  if (granted) {
+    element('permissionsSection').classList.add('granted');
+    element('permissionsHeader').textContent = message('permissionsGrantedHeader');
+    element('permissionsNote').textContent = message('permissionsGranted');
+  }
+});
+
+grantPermissions.addEventListener('click', () => {
+  grantPermissions.disabled = true;
+  chrome.permissions.request(permissionRequest, (granted) => {
+    if (chrome.runtime.lastError) {
+      console.error('Could not request extension permissions:', chrome.runtime.lastError.message);
+      permissionsStatus.textContent = message('permissionsError');
+      permissionsStatus.classList.add('error');
+      grantPermissions.disabled = false;
+      return;
+    }
+    if (granted) {
+      location.reload();
+      return;
+    }
+    permissionsStatus.textContent = message('permissionsDenied');
+    grantPermissions.disabled = false;
+  });
+});
 
 const contact = element('contactText');
-for (const [url, label] of [[`mailto:${CONTACT.EMAIL}`, CONTACT.EMAIL_LABEL], [CONTACT.GITHUB, CONTACT.GITHUB_LABEL]]) {
+for (const [url, label] of [
+  [EXTENSION.FIREFOX_ADDONS_URL, message('extensionWebsite')],
+  [`mailto:${CONTACT.EMAIL}`, CONTACT.EMAIL_LABEL],
+  [CONTACT.GITHUB, CONTACT.GITHUB_LABEL]
+]) {
   if (contact.childNodes.length) contact.append(document.createTextNode(CONTACT.SEPARATOR));
   const link = document.createElement('a');
   link.href = url;
