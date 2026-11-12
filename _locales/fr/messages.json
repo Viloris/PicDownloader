@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Clic gauche ou droit",
         "description": "Option du clic gauche ou droit"
+    },
+    "saveImageTooltip": {
+        "message": "Enregistrer l’image",
+        "description": "Info-bulle du bouton d’enregistrement d’image"
+    },
+    "settingsTooltip": {
+        "message": "Paramètres",
+        "description": "Info-bulle du bouton des paramètres"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Enregistrer l’image liée",
+        "description": "Info-bulle du bouton d’enregistrement de l’image liée"
     }
 }

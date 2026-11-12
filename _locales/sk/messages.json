@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Ľavé alebo pravé tlačidlo",
         "description": "Možnosť ľavého alebo pravého kliknutia"
+    },
+    "saveImageTooltip": {
+        "message": "Uložiť obrázok",
+        "description": "Popis tlačidla na uloženie obrázka"
+    },
+    "settingsTooltip": {
+        "message": "Nastavenia",
+        "description": "Popis tlačidla nastavení"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Uložiť prepojený obrázok",
+        "description": "Popis tlačidla na uloženie prepojeného obrázka"
     }
 }

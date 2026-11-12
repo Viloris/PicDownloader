@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Clic sinistro o destro",
         "description": "Opzione per il clic sinistro o destro"
+    },
+    "saveImageTooltip": {
+        "message": "Salva immagine",
+        "description": "Tooltip del pulsante per salvare un'immagine"
+    },
+    "settingsTooltip": {
+        "message": "Impostazioni",
+        "description": "Tooltip del pulsante delle impostazioni"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Salva immagine collegata",
+        "description": "Tooltip del pulsante per salvare un'immagine collegata"
     }
 }

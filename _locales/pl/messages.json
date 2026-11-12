@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Lewy lub prawy przycisk",
         "description": "Opcja lewego lub prawego przycisku myszy"
+    },
+    "saveImageTooltip": {
+        "message": "Zapisz obraz",
+        "description": "Podpowiedź przycisku zapisywania obrazu"
+    },
+    "settingsTooltip": {
+        "message": "Ustawienia",
+        "description": "Podpowiedź przycisku ustawień"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Zapisz obraz z odnośnika",
+        "description": "Podpowiedź przycisku zapisywania obrazu z odnośnika"
     }
 }

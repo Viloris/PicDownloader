@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Links- oder Rechtsklick",
         "description": "Option für Links- oder Rechtsklick"
+    },
+    "saveImageTooltip": {
+        "message": "Bild speichern",
+        "description": "Tooltip der Schaltfläche zum Speichern eines Bildes"
+    },
+    "settingsTooltip": {
+        "message": "Einstellungen",
+        "description": "Tooltip der Einstellungsschaltfläche"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Verknüpftes Bild speichern",
+        "description": "Tooltip der Schaltfläche zum Speichern eines verknüpften Bildes"
     }
 }

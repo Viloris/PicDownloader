@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Bal vagy jobb gomb",
         "description": "Bal vagy jobb egérgomb"
+    },
+    "saveImageTooltip": {
+        "message": "Kép mentése",
+        "description": "A képmentés gomb tooltip szövege"
+    },
+    "settingsTooltip": {
+        "message": "Beállítások",
+        "description": "A beállítások gomb tooltip szövege"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Linkelt kép mentése",
+        "description": "A linkelt kép mentése gomb tooltip szövege"
     }
 }

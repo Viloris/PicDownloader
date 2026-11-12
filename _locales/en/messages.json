@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Left or right click",
         "description": "Option for left or right click"
+    },
+    "saveImageTooltip": {
+        "message": "Save image",
+        "description": "Tooltip for the save image button"
+    },
+    "settingsTooltip": {
+        "message": "Settings",
+        "description": "Tooltip for the settings button"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Save linked image",
+        "description": "Tooltip for the save linked image button"
     }
 }

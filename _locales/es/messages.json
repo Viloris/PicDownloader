@@ -174,5 +174,17 @@
     "bothClickOption": {
         "message": "Clic izquierdo o derecho",
         "description": "Opción de clic izquierdo o derecho"
+    },
+    "saveImageTooltip": {
+        "message": "Guardar imagen",
+        "description": "Texto emergente del botón para guardar una imagen"
+    },
+    "settingsTooltip": {
+        "message": "Configuración",
+        "description": "Texto emergente del botón de configuración"
+    },
+    "saveLinkedImageTooltip": {
+        "message": "Guardar imagen enlazada",
+        "description": "Texto emergente del botón para guardar una imagen enlazada"
     }
 }

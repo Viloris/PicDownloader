@@ -4,6 +4,7 @@ let triggerButton = PicDownloaderConfig.DEFAULT_SETTINGS.triggerButton;
 let showDownloadButtons = PicDownloaderConfig.DEFAULT_SETTINGS.showDownloadButtons;
 let downloadImage = PicDownloaderConfig.ACTION.DOWNLOAD_IMAGE;
 let openOptions = PicDownloaderConfig.ACTION.OPEN_OPTIONS;
+const message = (key) => chrome.i18n.getMessage(key);
 
 const cleanupFloatingButtons = () => {
   const overlays = document.querySelectorAll('.img-save-btn-group-overlay');
@@ -105,12 +106,12 @@ const addButtonsToImage = (img) => {
 
   const saveBtn = document.createElement('button');
   saveBtn.className = 'save-btn-action';
-  saveBtn.title = 'Mentés';
+  saveBtn.title = message('saveImageTooltip');
   saveBtn.textContent = '💾';
 
   const settingsBtn = document.createElement('button');
   settingsBtn.className = 'settings-btn-action';
-  settingsBtn.title = 'Beállítások';
+  settingsBtn.title = message('settingsTooltip');
   settingsBtn.textContent = '⚙️';
 
   const IMAGE_EXTENSIONS = /\.(jpe?g|png|gif|webp|bmp|svg|tiff?|avif|ico)(\?.*)?$/i;
@@ -121,7 +122,7 @@ const addButtonsToImage = (img) => {
   if (isImageLink) {
     const saveLinkBtn = document.createElement('button');
     saveLinkBtn.className = 'save-link-btn-action';
-    saveLinkBtn.title = 'Linkelt kép mentése';
+    saveLinkBtn.title = message('saveLinkedImageTooltip');
     saveLinkBtn.textContent = '🔗';
     btnGroup.appendChild(saveLinkBtn);
   }
