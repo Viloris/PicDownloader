@@ -8,6 +8,7 @@ A small, configurable browser extension to quickly save images from web pages. P
 - Filename conflict handling: `uniquify` or `overwrite`.
 - Filter by minimum image width.
 - Options page for configuration (`options/index.html`).
+- The information page opens after installation or update and lets users grant download and website access.
 - Localization support in the `_locales/` folder.
 
 **Installation (for developers)**
@@ -66,13 +67,6 @@ web-ext run
 ```bash
 web-ext build --overwrite-dest
 ```
-
-**License**
-Suggested license: MIT. I can add a `LICENSE` file if you want.
-
----
-
-If you'd like, I can add screenshots, more detailed installation examples, or a sample `LICENSE` file.
 
 **Screenshots**
 Below are example screenshots — replace these placeholders with real captures if you have them.
