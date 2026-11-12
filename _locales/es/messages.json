@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Nombre de la extensión"
+    },
+    "extensionDescription": {
+        "message": "Guarda imágenes rápidamente desde la página actual.",
+        "description": "Descripción de la extensión"
+    },
+    "optionsPageTitle": {
+        "message": "Configuración",
+        "description": "Título de la página de configuración"
+    },
+    "optionsHeader": {
+        "message": "Configuración",
+        "description": "Encabezado de la página de configuración"
+    },
+    "saveLocationHeader": {
+        "message": "Ubicación de guardado",
+        "description": "Encabezado de la sección de ubicación de guardado"
+    },
+    "folderLabel": {
+        "message": "Nombre de la carpeta (dentro de Descargas):",
+        "description": "Etiqueta del nombre de la carpeta"
+    },
+    "folderPlaceholder": {
+        "message": "p. ej., imagenes_guardadas",
+        "description": "Texto de ejemplo para el nombre de la carpeta"
+    },
+    "folderNote": {
+        "message": "Nota: las imágenes se guardan en la carpeta de descargas predeterminada del navegador. Si no se indica un nombre de carpeta, se guardarán directamente en la carpeta Descargas.",
+        "description": "Nota sobre la carpeta"
+    },
+    "folderToDownload": {
+        "message": "ImagenesGuardadas",
+        "description": "Nombre predeterminado de la carpeta de descargas"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filtrar imágenes pequeñas",
+        "description": "Encabezado de la sección para filtrar imágenes pequeñas"
+    },
+    "minWidthLabel": {
+        "message": "Anchura mínima de la imagen (px):",
+        "description": "Etiqueta de la anchura mínima de la imagen"
+    },
+    "minWidthNote": {
+        "message": "El icono de guardado solo aparece en imágenes cuya anchura supera el valor seleccionado.",
+        "description": "Nota sobre la anchura mínima de la imagen"
+    },
+    "filenameConflictHeader": {
+        "message": "Gestión de conflictos de nombres de archivo",
+        "description": "Encabezado de la sección de conflictos de nombres de archivo"
+    },
+    "conflictLabel": {
+        "message": "Cambiar el nombre si hay un conflicto",
+        "description": "Etiqueta de la gestión de conflictos de nombres de archivo"
+    },
+    "conflictNote": {
+        "message": "Si se activa, el navegador generará un nombre de archivo único cuando ya exista un archivo con el mismo nombre. Si no se activa, se sobrescribirá el archivo existente.",
+        "description": "Nota sobre los conflictos de nombres de archivo"
+    },
+    "saveButton": {
+        "message": "Guardar configuración",
+        "description": "Texto del botón para guardar la configuración"
+    },
+    "restoreDefaultsButton": {
+        "message": "Restablecer valores predeterminados",
+        "description": "Texto del botón para restablecer los valores predeterminados"
+    },
+    "closeButtonTitle": {
+        "message": "Cerrar",
+        "description": "Título del botón para cerrar"
+    },
+    "settingsSaved": {
+        "message": "✅ ¡Configuración guardada!",
+        "description": "Mensaje de estado tras guardar la configuración"
+    },
+    "settingsStorageError": {
+        "message": "No se pudo acceder a la configuración. Inténtalo de nuevo.",
+        "description": "Error al acceder al almacenamiento de la configuración"
+    },
+    "defaultsRestored": {
+        "message": "✅ ¡Valores predeterminados restablecidos!",
+        "description": "Mensaje de estado tras restablecer los valores predeterminados"
+    },
+    "aboutHeader": {
+        "message": "Acerca de",
+        "description": "Encabezado de la sección Acerca de"
+    },
+    "aboutText": {
+        "message": "Desarrollado por Viloris",
+        "description": "Texto de la sección Acerca de"
+    },
+    "contactText": {
+        "message": "Correo • GitHub",
+        "description": "Sección de contacto"
+    },
+    "modifierNote": {
+        "message": "Tecla modificadora que debes mantener pulsada al hacer clic en una imagen para guardarla.",
+        "description": "Nota sobre el ajuste de la tecla modificadora"
+    },
+    "modifierHeader": {
+        "message": "Guardar con un clic del ratón",
+        "description": "Encabezado de la sección de la tecla modificadora"
+    },
+    "modifierLabel": {
+        "message": "Tecla modificadora:",
+        "description": "Etiqueta del ajuste de la tecla modificadora"
+    },
+    "buttonLabel": {
+        "message": "Botón del ratón:",
+        "description": "Etiqueta del ajuste del botón del ratón"
+    },
+    "buttonDisplayHeader": {
+        "message": "Mostrar botones de descarga",
+        "description": "Encabezado del ajuste para mostrar u ocultar los botones de descarga"
+    },
+    "buttonDisplayLabel": {
+        "message": "Mostrar botones de descarga",
+        "description": "Etiqueta del ajuste para mostrar u ocultar los botones"
+    },
+    "buttonDisplayNote": {
+        "message": "Si se desactiva, se ocultan los botones flotantes de descarga. Guardar con la tecla modificadora y un clic sigue funcionando.",
+        "description": "Nota sobre la visualización de los botones"
+    },
+    "leftClickOption": {
+        "message": "Clic izquierdo",
+        "description": "Opción de clic izquierdo"
+    },
+    "rightClickOption": {
+        "message": "Clic derecho",
+        "description": "Opción de clic derecho"
+    },
+    "bothClickOption": {
+        "message": "Clic izquierdo o derecho",
+        "description": "Opción de clic izquierdo o derecho"
+    }
+}

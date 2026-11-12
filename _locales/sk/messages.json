@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Názov rozšírenia"
+    },
+    "extensionDescription": {
+        "message": "Rýchlo ukladá obrázky z aktuálnej stránky.",
+        "description": "Popis rozšírenia"
+    },
+    "optionsPageTitle": {
+        "message": "Nastavenia",
+        "description": "Názov stránky s nastaveniami"
+    },
+    "optionsHeader": {
+        "message": "Nastavenia",
+        "description": "Hlavička stránky s nastaveniami"
+    },
+    "saveLocationHeader": {
+        "message": "Miesto uloženia",
+        "description": "Hlavička sekcie miesta uloženia"
+    },
+    "folderLabel": {
+        "message": "Názov priečinka (v priečinku Stiahnuté):",
+        "description": "Označenie názvu priečinka"
+    },
+    "folderPlaceholder": {
+        "message": "napr. ulozene_obrazky",
+        "description": "Zástupný text názvu priečinka"
+    },
+    "folderNote": {
+        "message": "Poznámka: obrázky sa ukladajú do predvoleného priečinka na sťahovanie v prehliadači. Ak názov priečinka nezadáte, obrázky sa uložia priamo do priečinka Stiahnuté.",
+        "description": "Poznámka o priečinku"
+    },
+    "folderToDownload": {
+        "message": "UlozeneObrazky",
+        "description": "Predvolený názov priečinka na sťahovanie"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filtrovať malé obrázky",
+        "description": "Hlavička sekcie filtrovania malých obrázkov"
+    },
+    "minWidthLabel": {
+        "message": "Minimálna šírka obrázka (px):",
+        "description": "Označenie minimálnej šírky obrázka"
+    },
+    "minWidthNote": {
+        "message": "Ikona uloženia sa zobrazuje iba pri obrázkoch širších, než je zvolená hodnota.",
+        "description": "Poznámka o minimálnej šírke obrázka"
+    },
+    "filenameConflictHeader": {
+        "message": "Riešenie konfliktov názvov súborov",
+        "description": "Hlavička sekcie konfliktov názvov súborov"
+    },
+    "conflictLabel": {
+        "message": "Pri konflikte názvu súbor premenovať",
+        "description": "Označenie riešenia konfliktov názvov súborov"
+    },
+    "conflictNote": {
+        "message": "Ak je táto možnosť zapnutá, prehliadač vytvorí jedinečný názov súboru, keď už súbor s rovnakým názvom existuje. Ak je vypnutá, existujúci súbor sa prepíše.",
+        "description": "Poznámka o konfliktoch názvov súborov"
+    },
+    "saveButton": {
+        "message": "Uložiť nastavenia",
+        "description": "Text tlačidla na uloženie nastavení"
+    },
+    "restoreDefaultsButton": {
+        "message": "Obnoviť predvolené nastavenia",
+        "description": "Text tlačidla na obnovenie predvolených nastavení"
+    },
+    "closeButtonTitle": {
+        "message": "Zavrieť",
+        "description": "Názov tlačidla na zatvorenie"
+    },
+    "settingsSaved": {
+        "message": "✅ Nastavenia boli uložené!",
+        "description": "Stavová správa po uložení nastavení"
+    },
+    "settingsStorageError": {
+        "message": "Nastavenia sa nepodarilo sprístupniť. Skúste to znova.",
+        "description": "Chyba pri prístupe k úložisku nastavení"
+    },
+    "defaultsRestored": {
+        "message": "✅ Predvolené nastavenia boli obnovené!",
+        "description": "Stavová správa po obnovení predvolených nastavení"
+    },
+    "aboutHeader": {
+        "message": "O aplikácii",
+        "description": "Hlavička sekcie O aplikácii"
+    },
+    "aboutText": {
+        "message": "Vyvinul Viloris",
+        "description": "Text sekcie O aplikácii"
+    },
+    "contactText": {
+        "message": "E-mail • GitHub",
+        "description": "Kontaktná sekcia"
+    },
+    "modifierNote": {
+        "message": "Modifikačný kláves, ktorý treba podržať pri kliknutí na obrázok, aby sa uložil.",
+        "description": "Poznámka k nastaveniu modifikačného klávesu"
+    },
+    "modifierHeader": {
+        "message": "Ukladanie kliknutím myši",
+        "description": "Hlavička sekcie modifikačného klávesu"
+    },
+    "modifierLabel": {
+        "message": "Modifikačný kláves:",
+        "description": "Označenie nastavenia modifikačného klávesu"
+    },
+    "buttonLabel": {
+        "message": "Tlačidlo myši:",
+        "description": "Označenie nastavenia tlačidla myši"
+    },
+    "buttonDisplayHeader": {
+        "message": "Zobrazovať tlačidlá sťahovania",
+        "description": "Hlavička nastavenia zobrazovania tlačidiel sťahovania"
+    },
+    "buttonDisplayLabel": {
+        "message": "Zobrazovať tlačidlá sťahovania",
+        "description": "Označenie nastavenia zobrazovania tlačidiel"
+    },
+    "buttonDisplayNote": {
+        "message": "Po vypnutí sa plávajúce tlačidlá sťahovania skryjú. Ukladanie pomocou modifikačného klávesu a kliknutia bude naďalej fungovať.",
+        "description": "Poznámka k zobrazovaniu tlačidiel"
+    },
+    "leftClickOption": {
+        "message": "Ľavé tlačidlo",
+        "description": "Možnosť ľavého kliknutia"
+    },
+    "rightClickOption": {
+        "message": "Pravé tlačidlo",
+        "description": "Možnosť pravého kliknutia"
+    },
+    "bothClickOption": {
+        "message": "Ľavé alebo pravé tlačidlo",
+        "description": "Možnosť ľavého alebo pravého kliknutia"
+    }
+}

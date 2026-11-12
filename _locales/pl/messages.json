@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Nazwa rozszerzenia"
+    },
+    "extensionDescription": {
+        "message": "Szybko zapisuj obrazy z bieżącej strony.",
+        "description": "Opis rozszerzenia"
+    },
+    "optionsPageTitle": {
+        "message": "Ustawienia",
+        "description": "Tytuł strony ustawień"
+    },
+    "optionsHeader": {
+        "message": "Ustawienia",
+        "description": "Nagłówek strony ustawień"
+    },
+    "saveLocationHeader": {
+        "message": "Miejsce zapisu",
+        "description": "Nagłówek sekcji miejsca zapisu"
+    },
+    "folderLabel": {
+        "message": "Nazwa folderu (w folderze Pobrane):",
+        "description": "Etykieta nazwy folderu"
+    },
+    "folderPlaceholder": {
+        "message": "np. zapisane_obrazy",
+        "description": "Tekst zastępczy nazwy folderu"
+    },
+    "folderNote": {
+        "message": "Uwaga: obrazy są zapisywane w domyślnym folderze pobierania przeglądarki. Jeśli nie podano nazwy folderu, obrazy zostaną zapisane bezpośrednio w folderze Pobrane.",
+        "description": "Informacja o folderze"
+    },
+    "folderToDownload": {
+        "message": "ZapisaneObrazy",
+        "description": "Domyślna nazwa folderu pobierania"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filtruj małe obrazy",
+        "description": "Nagłówek sekcji filtrowania małych obrazów"
+    },
+    "minWidthLabel": {
+        "message": "Minimalna szerokość obrazu (px):",
+        "description": "Etykieta minimalnej szerokości obrazu"
+    },
+    "minWidthNote": {
+        "message": "Ikona zapisu pojawia się tylko przy obrazach szerszych niż wybrana wartość.",
+        "description": "Informacja o minimalnej szerokości obrazu"
+    },
+    "filenameConflictHeader": {
+        "message": "Obsługa konfliktów nazw plików",
+        "description": "Nagłówek sekcji konfliktów nazw plików"
+    },
+    "conflictLabel": {
+        "message": "Zmieniaj nazwę w przypadku konfliktu",
+        "description": "Etykieta obsługi konfliktów nazw plików"
+    },
+    "conflictNote": {
+        "message": "Po zaznaczeniu tej opcji przeglądarka utworzy unikalną nazwę, jeśli plik o tej samej nazwie już istnieje. Jeśli opcja nie jest zaznaczona, istniejący plik zostanie zastąpiony.",
+        "description": "Informacja o konfliktach nazw plików"
+    },
+    "saveButton": {
+        "message": "Zapisz ustawienia",
+        "description": "Tekst przycisku zapisywania ustawień"
+    },
+    "restoreDefaultsButton": {
+        "message": "Przywróć ustawienia domyślne",
+        "description": "Tekst przycisku przywracania ustawień domyślnych"
+    },
+    "closeButtonTitle": {
+        "message": "Zamknij",
+        "description": "Tytuł przycisku zamykania"
+    },
+    "settingsSaved": {
+        "message": "✅ Ustawienia zapisane!",
+        "description": "Komunikat po zapisaniu ustawień"
+    },
+    "settingsStorageError": {
+        "message": "Nie można uzyskać dostępu do ustawień. Spróbuj ponownie.",
+        "description": "Błąd dostępu do pamięci ustawień"
+    },
+    "defaultsRestored": {
+        "message": "✅ Przywrócono ustawienia domyślne!",
+        "description": "Komunikat po przywróceniu ustawień domyślnych"
+    },
+    "aboutHeader": {
+        "message": "Informacje",
+        "description": "Nagłówek sekcji Informacje"
+    },
+    "aboutText": {
+        "message": "Autor: Viloris",
+        "description": "Tekst sekcji Informacje"
+    },
+    "contactText": {
+        "message": "E-mail • GitHub",
+        "description": "Sekcja kontaktowa"
+    },
+    "modifierNote": {
+        "message": "Klawisz modyfikujący, który należy przytrzymać podczas klikania obrazu, aby go zapisać.",
+        "description": "Informacja o ustawieniu klawisza modyfikującego"
+    },
+    "modifierHeader": {
+        "message": "Zapisuj kliknięciem myszy",
+        "description": "Nagłówek sekcji klawisza modyfikującego"
+    },
+    "modifierLabel": {
+        "message": "Klawisz modyfikujący:",
+        "description": "Etykieta ustawienia klawisza modyfikującego"
+    },
+    "buttonLabel": {
+        "message": "Przycisk myszy:",
+        "description": "Etykieta ustawienia przycisku myszy"
+    },
+    "buttonDisplayHeader": {
+        "message": "Pokaż przyciski pobierania",
+        "description": "Nagłówek ustawienia wyświetlania przycisków pobierania"
+    },
+    "buttonDisplayLabel": {
+        "message": "Pokaż przyciski pobierania",
+        "description": "Etykieta ustawienia wyświetlania przycisków"
+    },
+    "buttonDisplayNote": {
+        "message": "Po wyłączeniu pływające przyciski pobierania są ukryte. Zapisywanie za pomocą klawisza modyfikującego i kliknięcia nadal działa.",
+        "description": "Informacja o wyświetlaniu przycisków"
+    },
+    "leftClickOption": {
+        "message": "Lewy przycisk",
+        "description": "Opcja lewego przycisku myszy"
+    },
+    "rightClickOption": {
+        "message": "Prawy przycisk",
+        "description": "Opcja prawego przycisku myszy"
+    },
+    "bothClickOption": {
+        "message": "Lewy lub prawy przycisk",
+        "description": "Opcja lewego lub prawego przycisku myszy"
+    }
+}

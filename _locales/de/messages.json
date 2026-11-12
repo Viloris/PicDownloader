@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Name der Erweiterung"
+    },
+    "extensionDescription": {
+        "message": "Bilder schnell von der aktuellen Seite speichern.",
+        "description": "Beschreibung der Erweiterung"
+    },
+    "optionsPageTitle": {
+        "message": "Einstellungen",
+        "description": "Titel der Einstellungsseite"
+    },
+    "optionsHeader": {
+        "message": "Einstellungen speichern",
+        "description": "Überschrift der Einstellungsseite"
+    },
+    "saveLocationHeader": {
+        "message": "Speicherort",
+        "description": "Überschrift des Speicherortbereichs"
+    },
+    "folderLabel": {
+        "message": "Ordnername (im Downloads-Ordner):",
+        "description": "Beschriftung des Ordnernamens"
+    },
+    "folderPlaceholder": {
+        "message": "z. B. gespeicherte_bilder",
+        "description": "Platzhalter für den Ordnernamen"
+    },
+    "folderNote": {
+        "message": "Hinweis: Bilder werden im Standard-Downloadordner des Browsers gespeichert. Wenn kein Ordnername angegeben ist, werden die Bilder direkt im Downloadordner gespeichert.",
+        "description": "Hinweis zum Ordner"
+    },
+    "folderToDownload": {
+        "message": "GespeicherteBilder",
+        "description": "Standardordnername für Downloads"
+    },
+    "smallImageFilterHeader": {
+        "message": "Kleine Bilder filtern",
+        "description": "Überschrift des Bereichs zum Filtern kleiner Bilder"
+    },
+    "minWidthLabel": {
+        "message": "Minimale Bildbreite (px):",
+        "description": "Beschriftung der minimalen Bildbreite"
+    },
+    "minWidthNote": {
+        "message": "Das Speichersymbol wird nur bei Bildern angezeigt, die breiter als der ausgewählte Wert sind.",
+        "description": "Hinweis zur minimalen Bildbreite"
+    },
+    "filenameConflictHeader": {
+        "message": "Umgang mit Dateinamenskonflikten",
+        "description": "Überschrift des Bereichs für Dateinamenskonflikte"
+    },
+    "conflictLabel": {
+        "message": "Bei Dateinamenskonflikten umbenennen",
+        "description": "Beschriftung für Dateinamenskonflikte"
+    },
+    "conflictNote": {
+        "message": "Wenn diese Option aktiviert ist, erzeugt der Browser einen eindeutigen Dateinamen, falls eine Datei mit demselben Namen bereits vorhanden ist. Andernfalls wird die vorhandene Datei überschrieben.",
+        "description": "Hinweis zu Dateinamenskonflikten"
+    },
+    "saveButton": {
+        "message": "Einstellungen speichern",
+        "description": "Text der Schaltfläche zum Speichern der Einstellungen"
+    },
+    "restoreDefaultsButton": {
+        "message": "Standardeinstellungen wiederherstellen",
+        "description": "Text der Schaltfläche zum Wiederherstellen der Standardeinstellungen"
+    },
+    "closeButtonTitle": {
+        "message": "Schließen",
+        "description": "Titel der Schaltfläche zum Schließen"
+    },
+    "settingsSaved": {
+        "message": "✅ Einstellungen gespeichert!",
+        "description": "Statusmeldung nach dem Speichern der Einstellungen"
+    },
+    "settingsStorageError": {
+        "message": "Auf die Einstellungen konnte nicht zugegriffen werden. Bitte versuche es erneut.",
+        "description": "Fehler beim Zugriff auf den Einstellungsspeicher"
+    },
+    "defaultsRestored": {
+        "message": "✅ Standardeinstellungen wiederhergestellt!",
+        "description": "Statusmeldung nach dem Wiederherstellen der Standardeinstellungen"
+    },
+    "aboutHeader": {
+        "message": "Über",
+        "description": "Überschrift des Info-Bereichs"
+    },
+    "aboutText": {
+        "message": "Entwickelt von Viloris",
+        "description": "Text im Info-Bereich"
+    },
+    "contactText": {
+        "message": "E-Mail • GitHub",
+        "description": "Kontaktbereich"
+    },
+    "modifierNote": {
+        "message": "Modifikatortaste, die beim Klicken auf ein Bild gedrückt gehalten werden muss, um es zu speichern.",
+        "description": "Hinweis zur Einstellung der Modifikatortaste"
+    },
+    "modifierHeader": {
+        "message": "Mit Mausklick speichern",
+        "description": "Überschrift des Bereichs für die Modifikatortaste"
+    },
+    "modifierLabel": {
+        "message": "Modifikatortaste:",
+        "description": "Beschriftung der Einstellung für die Modifikatortaste"
+    },
+    "buttonLabel": {
+        "message": "Maustaste:",
+        "description": "Beschriftung der Einstellung für die Maustaste"
+    },
+    "buttonDisplayHeader": {
+        "message": "Download-Schaltflächen anzeigen",
+        "description": "Überschrift für das Ein- und Ausblenden der Download-Schaltflächen"
+    },
+    "buttonDisplayLabel": {
+        "message": "Download-Schaltflächen anzeigen",
+        "description": "Beschriftung der Einstellung zum Ein- und Ausblenden der Schaltflächen"
+    },
+    "buttonDisplayNote": {
+        "message": "Wenn deaktiviert, werden die schwebenden Download-Schaltflächen ausgeblendet. Das Speichern mit Modifikatortaste und Klick funktioniert weiterhin.",
+        "description": "Hinweis zur Einstellung der Schaltflächenanzeige"
+    },
+    "leftClickOption": {
+        "message": "Linksklick",
+        "description": "Option für den Linksklick"
+    },
+    "rightClickOption": {
+        "message": "Rechtsklick",
+        "description": "Option für den Rechtsklick"
+    },
+    "bothClickOption": {
+        "message": "Links- oder Rechtsklick",
+        "description": "Option für Links- oder Rechtsklick"
+    }
+}

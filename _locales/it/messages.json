@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Nome dell’estensione"
+    },
+    "extensionDescription": {
+        "message": "Salva rapidamente le immagini dalla pagina corrente.",
+        "description": "Descrizione dell’estensione"
+    },
+    "optionsPageTitle": {
+        "message": "Impostazioni",
+        "description": "Titolo della pagina delle impostazioni"
+    },
+    "optionsHeader": {
+        "message": "Impostazioni",
+        "description": "Intestazione della pagina delle impostazioni"
+    },
+    "saveLocationHeader": {
+        "message": "Percorso di salvataggio",
+        "description": "Intestazione della sezione sul percorso di salvataggio"
+    },
+    "folderLabel": {
+        "message": "Nome della cartella (in Download):",
+        "description": "Etichetta del nome della cartella"
+    },
+    "folderPlaceholder": {
+        "message": "ad es. immagini_salvate",
+        "description": "Testo segnaposto per il nome della cartella"
+    },
+    "folderNote": {
+        "message": "Nota: le immagini vengono salvate nella cartella di download predefinita del browser. Se non viene specificato un nome di cartella, le immagini vengono salvate direttamente nella cartella Download.",
+        "description": "Nota sulla cartella"
+    },
+    "folderToDownload": {
+        "message": "ImmaginiSalvate",
+        "description": "Nome predefinito della cartella di download"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filtra le immagini piccole",
+        "description": "Intestazione della sezione per filtrare le immagini piccole"
+    },
+    "minWidthLabel": {
+        "message": "Larghezza minima dell’immagine (px):",
+        "description": "Etichetta della larghezza minima dell’immagine"
+    },
+    "minWidthNote": {
+        "message": "L’icona di salvataggio viene mostrata solo sulle immagini più larghe del valore selezionato.",
+        "description": "Nota sulla larghezza minima dell’immagine"
+    },
+    "filenameConflictHeader": {
+        "message": "Gestione dei conflitti tra nomi di file",
+        "description": "Intestazione della sezione sui conflitti tra nomi di file"
+    },
+    "conflictLabel": {
+        "message": "Rinomina in caso di conflitto",
+        "description": "Etichetta della gestione dei conflitti tra nomi di file"
+    },
+    "conflictNote": {
+        "message": "Se selezionata, questa opzione fa sì che il browser generi un nome univoco quando esiste già un file con lo stesso nome. Se non è selezionata, il file esistente viene sovrascritto.",
+        "description": "Nota sui conflitti tra nomi di file"
+    },
+    "saveButton": {
+        "message": "Salva impostazioni",
+        "description": "Testo del pulsante per salvare le impostazioni"
+    },
+    "restoreDefaultsButton": {
+        "message": "Ripristina impostazioni predefinite",
+        "description": "Testo del pulsante per ripristinare le impostazioni predefinite"
+    },
+    "closeButtonTitle": {
+        "message": "Chiudi",
+        "description": "Titolo del pulsante di chiusura"
+    },
+    "settingsSaved": {
+        "message": "✅ Impostazioni salvate!",
+        "description": "Messaggio di stato dopo il salvataggio delle impostazioni"
+    },
+    "settingsStorageError": {
+        "message": "Impossibile accedere alle impostazioni. Riprova.",
+        "description": "Errore di accesso allo spazio di archiviazione delle impostazioni"
+    },
+    "defaultsRestored": {
+        "message": "✅ Impostazioni predefinite ripristinate!",
+        "description": "Messaggio di stato dopo il ripristino delle impostazioni predefinite"
+    },
+    "aboutHeader": {
+        "message": "Informazioni",
+        "description": "Intestazione della sezione Informazioni"
+    },
+    "aboutText": {
+        "message": "Sviluppato da Viloris",
+        "description": "Testo della sezione Informazioni"
+    },
+    "contactText": {
+        "message": "Email • GitHub",
+        "description": "Sezione dei contatti"
+    },
+    "modifierNote": {
+        "message": "Tasto modificatore da tenere premuto mentre si fa clic su un’immagine per salvarla.",
+        "description": "Nota sull’impostazione del tasto modificatore"
+    },
+    "modifierHeader": {
+        "message": "Salva con un clic del mouse",
+        "description": "Intestazione della sezione del tasto modificatore"
+    },
+    "modifierLabel": {
+        "message": "Tasto modificatore:",
+        "description": "Etichetta dell’impostazione del tasto modificatore"
+    },
+    "buttonLabel": {
+        "message": "Pulsante del mouse:",
+        "description": "Etichetta dell’impostazione del pulsante del mouse"
+    },
+    "buttonDisplayHeader": {
+        "message": "Mostra i pulsanti di download",
+        "description": "Intestazione dell’impostazione di visualizzazione dei pulsanti di download"
+    },
+    "buttonDisplayLabel": {
+        "message": "Mostra i pulsanti di download",
+        "description": "Etichetta dell’impostazione di visualizzazione dei pulsanti"
+    },
+    "buttonDisplayNote": {
+        "message": "Se disattivata, i pulsanti di download flottanti vengono nascosti. Il salvataggio con tasto modificatore e clic continua a funzionare.",
+        "description": "Nota sulla visualizzazione dei pulsanti"
+    },
+    "leftClickOption": {
+        "message": "Clic sinistro",
+        "description": "Opzione per il clic sinistro"
+    },
+    "rightClickOption": {
+        "message": "Clic destro",
+        "description": "Opzione per il clic destro"
+    },
+    "bothClickOption": {
+        "message": "Clic sinistro o destro",
+        "description": "Opzione per il clic sinistro o destro"
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "extensionName": {
+        "message": "PicDownloader",
+        "description": "Nom de l’extension"
+    },
+    "extensionDescription": {
+        "message": "Enregistrez rapidement des images depuis la page actuelle.",
+        "description": "Description de l’extension"
+    },
+    "optionsPageTitle": {
+        "message": "Paramètres",
+        "description": "Titre de la page des paramètres"
+    },
+    "optionsHeader": {
+        "message": "Paramètres",
+        "description": "En-tête de la page des paramètres"
+    },
+    "saveLocationHeader": {
+        "message": "Emplacement d’enregistrement",
+        "description": "En-tête de la section sur l’emplacement d’enregistrement"
+    },
+    "folderLabel": {
+        "message": "Nom du dossier (dans Téléchargements) :",
+        "description": "Libellé du nom du dossier"
+    },
+    "folderPlaceholder": {
+        "message": "par ex. images_enregistrees",
+        "description": "Texte indicatif pour le nom du dossier"
+    },
+    "folderNote": {
+        "message": "Remarque : les images sont enregistrées dans le dossier de téléchargement par défaut du navigateur. Si aucun nom de dossier n’est indiqué, elles sont enregistrées directement dans ce dossier.",
+        "description": "Remarque sur le dossier"
+    },
+    "folderToDownload": {
+        "message": "ImagesEnregistrees",
+        "description": "Nom du dossier de téléchargement par défaut"
+    },
+    "smallImageFilterHeader": {
+        "message": "Filtrer les petites images",
+        "description": "En-tête de la section de filtrage des petites images"
+    },
+    "minWidthLabel": {
+        "message": "Largeur minimale de l’image (px) :",
+        "description": "Libellé de la largeur minimale de l’image"
+    },
+    "minWidthNote": {
+        "message": "L’icône d’enregistrement apparaît uniquement sur les images dont la largeur dépasse la valeur choisie.",
+        "description": "Remarque sur la largeur minimale de l’image"
+    },
+    "filenameConflictHeader": {
+        "message": "Gestion des conflits de noms de fichiers",
+        "description": "En-tête de la section sur les conflits de noms de fichiers"
+    },
+    "conflictLabel": {
+        "message": "Renommer en cas de conflit de nom",
+        "description": "Libellé de la gestion des conflits de noms de fichiers"
+    },
+    "conflictNote": {
+        "message": "Si cette option est activée, le navigateur crée un nom de fichier unique si un fichier portant le même nom existe déjà. Sinon, le fichier existant est remplacé.",
+        "description": "Remarque sur les conflits de noms de fichiers"
+    },
+    "saveButton": {
+        "message": "Enregistrer les paramètres",
+        "description": "Texte du bouton d’enregistrement des paramètres"
+    },
+    "restoreDefaultsButton": {
+        "message": "Rétablir les paramètres par défaut",
+        "description": "Texte du bouton de rétablissement des paramètres par défaut"
+    },
+    "closeButtonTitle": {
+        "message": "Fermer",
+        "description": "Titre du bouton de fermeture"
+    },
+    "settingsSaved": {
+        "message": "✅ Paramètres enregistrés !",
+        "description": "Message d’état après l’enregistrement des paramètres"
+    },
+    "settingsStorageError": {
+        "message": "Impossible d’accéder aux paramètres. Veuillez réessayer.",
+        "description": "Erreur d’accès au stockage des paramètres"
+    },
+    "defaultsRestored": {
+        "message": "✅ Paramètres par défaut rétablis !",
+        "description": "Message d’état après le rétablissement des paramètres par défaut"
+    },
+    "aboutHeader": {
+        "message": "À propos",
+        "description": "En-tête de la section À propos"
+    },
+    "aboutText": {
+        "message": "Développé par Viloris",
+        "description": "Texte de la section À propos"
+    },
+    "contactText": {
+        "message": "E-mail • GitHub",
+        "description": "Section de contact"
+    },
+    "modifierNote": {
+        "message": "Touche de modification à maintenir enfoncée lorsque vous cliquez sur une image pour la télécharger.",
+        "description": "Remarque sur le réglage de la touche de modification"
+    },
+    "modifierHeader": {
+        "message": "Enregistrer avec un clic",
+        "description": "En-tête de la section de la touche de modification"
+    },
+    "modifierLabel": {
+        "message": "Touche de modification :",
+        "description": "Libellé du réglage de la touche de modification"
+    },
+    "buttonLabel": {
+        "message": "Bouton de la souris :",
+        "description": "Libellé du réglage du bouton de la souris"
+    },
+    "buttonDisplayHeader": {
+        "message": "Afficher les boutons de téléchargement",
+        "description": "En-tête du réglage d’affichage des boutons de téléchargement"
+    },
+    "buttonDisplayLabel": {
+        "message": "Afficher les boutons de téléchargement",
+        "description": "Libellé du réglage d’affichage des boutons"
+    },
+    "buttonDisplayNote": {
+        "message": "Si cette option est désactivée, les boutons de téléchargement flottants sont masqués. L’enregistrement avec la touche de modification et un clic reste possible.",
+        "description": "Remarque sur l’affichage des boutons"
+    },
+    "leftClickOption": {
+        "message": "Clic gauche",
+        "description": "Option du clic gauche"
+    },
+    "rightClickOption": {
+        "message": "Clic droit",
+        "description": "Option du clic droit"
+    },
+    "bothClickOption": {
+        "message": "Clic gauche ou droit",
+        "description": "Option du clic gauche ou droit"
+    }
+}
