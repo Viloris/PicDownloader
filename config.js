@@ -1,4 +1,4 @@
-window.PicDownloaderConfig = {
+globalThis.PicDownloaderConfig = {
     DEFAULT_SETTINGS: {
         downloadFolder: 'mentett_kepek',
         minImageWidth: 100,

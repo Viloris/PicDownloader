@@ -11,22 +11,28 @@ A small, configurable browser extension to quickly save images from web pages. P
 - The information page opens after installation or update and lets users grant download and website access.
 - Localization support in the `_locales/` folder.
 
-**Installation (for developers)**
+**Build for Firefox and Chrome**
 
-- Run in development using `web-ext`:
-
-```bash
-web-ext run
-```
-
-- Build a release package:
+The source is shared; the build creates separate browser-ready folders:
 
 ```bash
-web-ext build --overwrite-dest
+npm run build
 ```
 
-- Manual install (Firefox): Open `about:debugging` → "This Firefox" → "Load Temporary Add-on" → select the `manifest.json` in this project.
-- Manual install (Chrome/Edge): Open Extensions page → Developer mode → "Load unpacked" → select this project folder.
+This creates `dist/firefox/` and `dist/chrome/`. To build only one browser:
+
+```bash
+npm run build:firefox
+npm run build:chrome
+```
+
+For Firefox development, run `web-ext` against the generated Firefox build:
+
+```bash
+web-ext run --source-dir dist/firefox
+```
+
+For Chrome, open `chrome://extensions/`, enable Developer mode, and choose **Load unpacked** → `dist/chrome/`. For Firefox, open `about:debugging` → **This Firefox** → **Load Temporary Add-on**, and select `dist/firefox/manifest.json`.
 
 **Usage**
 
@@ -54,20 +60,6 @@ UI strings are in the `_locales/` folder (e.g. `en/messages.json`, `hu/messages.
 - Please open issues or pull requests on the GitHub repository (update the `GITHUB` field in `config.js` with your repo URL).
 - Contact email (from `config.js`): vilorisdeveloper@gmail.com
 
-**Build & Testing**
-
-- Run in dev mode:
-
-```bash
-web-ext run
-```
-
-- Build for release:
-
-```bash
-web-ext build --overwrite-dest
-```
-
 **Screenshots**
 Below are example screenshots — replace these placeholders with real captures if you have them.
 
@@ -77,33 +69,23 @@ Below are example screenshots — replace these placeholders with real captures 
 
 **Detailed installation (examples)**
 
-- Install dependencies (if you don't have `web-ext`):
+- Install `web-ext` globally if you want to run the Firefox development build:
 
 ```bash
 npm install --global web-ext
 ```
 
-- Run in development (auto reloads on change):
+- Build both browsers:
 
 ```bash
-web-ext run
+npm run build
 ```
 
-- Build a release package:
+- Run Firefox in development (auto reloads on change):
 
 ```bash
-web-ext build --overwrite-dest
+web-ext run --source-dir dist/firefox
 ```
-
-- Manual install steps (Firefox):
-  1.  Open `about:debugging` in Firefox.
-  2.  Click "This Firefox" (or "This Nightly").
-  3.  Click "Load Temporary Add-on" and select `manifest.json` from this project.
-
-- Manual install steps (Chrome/Edge):
-  1.  Open the Extensions page (`chrome://extensions/` or `edge://extensions/`).
-  2.  Enable "Developer mode".
-  3.  Click "Load unpacked" and select this project's folder.
 
 **Examples & usage scenarios**
 
@@ -121,7 +103,7 @@ web-ext build --overwrite-dest
 You can edit `config.js` to change default behaviour. Example snippet:
 
 ```js
-window.PicDownloaderConfig = {
+globalThis.PicDownloaderConfig = {
   DEFAULT_SETTINGS: {
     downloadFolder: "my_saved_images",
     minImageWidth: 150,
@@ -136,7 +118,7 @@ window.PicDownloaderConfig = {
 **Contributing**
 
 - Fork the repository and open a pull request with your changes.
-- Run `web-ext run` locally to test changes.
+- Run `npm run build` to generate both browser builds, then test the relevant output folder.
 - Update or add screenshots in the `images/` folder and reference them from this README.
 
 **License**
