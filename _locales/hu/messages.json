@@ -7,6 +7,10 @@
         "message": "Képeket ment gyorsan az aktuális oldalról.",
         "description": "Bővítmény leírása"
     },
+    "versionLabel": {
+        "message": "Verzió:",
+        "description": "A bővítmény verziójának felirata"
+    },
     "optionsPageTitle": {
         "message": "Beállítások",
         "description": "Beállítások oldal címe"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Fejlesztő: Viloris",
         "description": "Névjegy szekció szövege"
+    },
+    "permissionsNote": {
+        "message": "További engedélyek szükségesek a PicDownloader használatához weboldalakon.",
+        "description": "A szükséges engedélyek magyarázata"
+    },
+    "permissionsHeader": {
+        "message": "Mentés engedélyezése a weboldalakon",
+        "description": "Az engedélyek szakasz címe"
+    },
+    "grantPermissions": {
+        "message": "Engedélyezés",
+        "description": "Engedélykérő gomb"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Engedélyek",
+        "description": "A megadott engedélyek szakaszának címe"
+    },
+    "permissionsGranted": {
+        "message": "A szükséges engedélyek megadva.",
+        "description": "Üzenet a megadott engedélyekről"
+    },
+    "permissionsDenied": {
+        "message": "Az engedélyeket nem adtad meg. Előfordulhat, hogy a kiegészítő nem működik megfelelően.",
+        "description": "Üzenet az engedélyek elutasításakor"
+    },
+    "permissionsError": {
+        "message": "Nem sikerült engedélyt kérni. Próbáld újra.",
+        "description": "Hiba az engedélykérés során"
     },
     "contactText": {
         "message": "Email • GitHub",

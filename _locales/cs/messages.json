@@ -7,6 +7,10 @@
         "message": "Rychle ukládejte obrázky z aktuální stránky.",
         "description": "Popis rozšíření"
     },
+    "versionLabel": {
+        "message": "Verze:",
+        "description": "Označení verze rozšíření"
+    },
     "optionsPageTitle": {
         "message": "Nastavení",
         "description": "Název stránky nastavení"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Vyvinul Viloris",
         "description": "Text sekce O aplikaci"
+    },
+    "permissionsNote": {
+        "message": "K používání PicDownloader na webových stránkách jsou potřeba další oprávnění.",
+        "description": "Vysvětlení požadovaných oprávnění"
+    },
+    "permissionsHeader": {
+        "message": "Povolit ukládání na webových stránkách",
+        "description": "Nadpis sekce oprávnění"
+    },
+    "grantPermissions": {
+        "message": "Povolit",
+        "description": "Tlačítko pro žádost o oprávnění"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Oprávnění",
+        "description": "Nadpis udělených oprávnění"
+    },
+    "permissionsGranted": {
+        "message": "Potřebná oprávnění byla udělena.",
+        "description": "Zpráva po udělení oprávnění"
+    },
+    "permissionsDenied": {
+        "message": "Oprávnění nebyla udělena. Rozšíření nemusí správně fungovat.",
+        "description": "Zpráva při zamítnutí oprávnění"
+    },
+    "permissionsError": {
+        "message": "O oprávnění se nepodařilo požádat. Zkuste to znovu.",
+        "description": "Chyba při žádosti o oprávnění"
     },
     "contactText": {
         "message": "E-mail • GitHub",

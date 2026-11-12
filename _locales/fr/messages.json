@@ -7,6 +7,10 @@
         "message": "Enregistrez rapidement des images depuis la page actuelle.",
         "description": "Description de l’extension"
     },
+    "versionLabel": {
+        "message": "Version :",
+        "description": "Libellé de la version de l’extension"
+    },
     "optionsPageTitle": {
         "message": "Paramètres",
         "description": "Titre de la page des paramètres"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Développé par Viloris",
         "description": "Texte de la section À propos"
+    },
+    "permissionsNote": {
+        "message": "Des autorisations supplémentaires sont nécessaires pour utiliser PicDownloader sur les sites web.",
+        "description": "Explication des autorisations nécessaires"
+    },
+    "permissionsHeader": {
+        "message": "Autoriser l’enregistrement sur les sites web",
+        "description": "Titre de la section des autorisations"
+    },
+    "grantPermissions": {
+        "message": "Autoriser",
+        "description": "Bouton de demande d’autorisations"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Autorisations",
+        "description": "Titre des autorisations accordées"
+    },
+    "permissionsGranted": {
+        "message": "Les autorisations nécessaires ont été accordées.",
+        "description": "Message lorsque les autorisations sont accordées"
+    },
+    "permissionsDenied": {
+        "message": "Les autorisations n’ont pas été accordées. L’extension risque de ne pas fonctionner correctement.",
+        "description": "Message lorsque les autorisations sont refusées"
+    },
+    "permissionsError": {
+        "message": "Impossible de demander les autorisations. Veuillez réessayer.",
+        "description": "Erreur lors de la demande d’autorisations"
     },
     "contactText": {
         "message": "E-mail • GitHub",

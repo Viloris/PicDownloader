@@ -7,6 +7,10 @@
         "message": "Salva rapidamente le immagini dalla pagina corrente.",
         "description": "Descrizione dell’estensione"
     },
+    "versionLabel": {
+        "message": "Versione:",
+        "description": "Etichetta della versione dell’estensione"
+    },
     "optionsPageTitle": {
         "message": "Impostazioni",
         "description": "Titolo della pagina delle impostazioni"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Sviluppato da Viloris",
         "description": "Testo della sezione Informazioni"
+    },
+    "permissionsNote": {
+        "message": "Per usare PicDownloader sui siti web sono necessarie autorizzazioni aggiuntive.",
+        "description": "Spiegazione delle autorizzazioni necessarie"
+    },
+    "permissionsHeader": {
+        "message": "Consenti il salvataggio sui siti web",
+        "description": "Titolo della sezione delle autorizzazioni"
+    },
+    "grantPermissions": {
+        "message": "Consenti",
+        "description": "Pulsante per richiedere autorizzazioni"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Autorizzazioni",
+        "description": "Titolo delle autorizzazioni concesse"
+    },
+    "permissionsGranted": {
+        "message": "Le autorizzazioni necessarie sono state concesse.",
+        "description": "Messaggio quando le autorizzazioni sono concesse"
+    },
+    "permissionsDenied": {
+        "message": "Le autorizzazioni non sono state concesse. L'estensione potrebbe non funzionare correttamente.",
+        "description": "Messaggio quando le autorizzazioni vengono negate"
+    },
+    "permissionsError": {
+        "message": "Impossibile richiedere le autorizzazioni. Riprova.",
+        "description": "Errore durante la richiesta delle autorizzazioni"
     },
     "contactText": {
         "message": "Email • GitHub",

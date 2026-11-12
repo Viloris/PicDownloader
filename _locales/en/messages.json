@@ -7,6 +7,10 @@
         "message": "Save images quickly from the current page.",
         "description": "Extension description"
     },
+    "versionLabel": {
+        "message": "Version:",
+        "description": "Extension version label"
+    },
     "optionsPageTitle": {
         "message": "Settings",
         "description": "Options page title"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Developed by Viloris",
         "description": "About section text"
+    },
+    "permissionsNote": {
+        "message": "Additional permissions are required to use PicDownloader on websites.",
+        "description": "Explanation of the required permissions"
+    },
+    "permissionsHeader": {
+        "message": "Enable saving on websites",
+        "description": "Heading for the permissions section"
+    },
+    "grantPermissions": {
+        "message": "Enable",
+        "description": "Button to request permissions"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Permissions",
+        "description": "Heading for granted permissions"
+    },
+    "permissionsGranted": {
+        "message": "The required permissions have been granted.",
+        "description": "Message shown when permissions are granted"
+    },
+    "permissionsDenied": {
+        "message": "Permissions were not granted. The extension may not work correctly.",
+        "description": "Message shown when permissions are denied"
+    },
+    "permissionsError": {
+        "message": "Could not request permissions. Please try again.",
+        "description": "Error requesting permissions"
     },
     "contactText": {
         "message": "Email • GitHub",

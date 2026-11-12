@@ -7,6 +7,10 @@
         "message": "Bilder schnell von der aktuellen Seite speichern.",
         "description": "Beschreibung der Erweiterung"
     },
+    "versionLabel": {
+        "message": "Version:",
+        "description": "Versionsbezeichnung der Erweiterung"
+    },
     "optionsPageTitle": {
         "message": "Einstellungen",
         "description": "Titel der Einstellungsseite"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Entwickelt von Viloris",
         "description": "Text im Info-Bereich"
+    },
+    "permissionsNote": {
+        "message": "Für die Nutzung von PicDownloader auf Websites sind zusätzliche Berechtigungen erforderlich.",
+        "description": "Erklärung der benötigten Berechtigungen"
+    },
+    "permissionsHeader": {
+        "message": "Speichern auf Websites erlauben",
+        "description": "Überschrift des Berechtigungsbereichs"
+    },
+    "grantPermissions": {
+        "message": "Erlauben",
+        "description": "Schaltfläche zum Anfordern von Berechtigungen"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Berechtigungen",
+        "description": "Überschrift der erteilten Berechtigungen"
+    },
+    "permissionsGranted": {
+        "message": "Die erforderlichen Berechtigungen wurden erteilt.",
+        "description": "Meldung bei erteilten Berechtigungen"
+    },
+    "permissionsDenied": {
+        "message": "Die Berechtigungen wurden nicht erteilt. Die Erweiterung funktioniert möglicherweise nicht richtig.",
+        "description": "Meldung bei abgelehnten Berechtigungen"
+    },
+    "permissionsError": {
+        "message": "Berechtigungen konnten nicht angefordert werden. Bitte versuche es erneut.",
+        "description": "Fehler beim Anfordern von Berechtigungen"
     },
     "contactText": {
         "message": "E-Mail • GitHub",

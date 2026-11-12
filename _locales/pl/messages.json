@@ -7,6 +7,10 @@
         "message": "Szybko zapisuj obrazy z bieżącej strony.",
         "description": "Opis rozszerzenia"
     },
+    "versionLabel": {
+        "message": "Wersja:",
+        "description": "Etykieta wersji rozszerzenia"
+    },
     "optionsPageTitle": {
         "message": "Ustawienia",
         "description": "Tytuł strony ustawień"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Autor: Viloris",
         "description": "Tekst sekcji Informacje"
+    },
+    "permissionsNote": {
+        "message": "Do korzystania z PicDownloader na stronach internetowych wymagane są dodatkowe uprawnienia.",
+        "description": "Wyjaśnienie wymaganych uprawnień"
+    },
+    "permissionsHeader": {
+        "message": "Zezwól na zapisywanie na stronach internetowych",
+        "description": "Nagłówek sekcji uprawnień"
+    },
+    "grantPermissions": {
+        "message": "Zezwól",
+        "description": "Przycisk żądania uprawnień"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Uprawnienia",
+        "description": "Nagłówek przyznanych uprawnień"
+    },
+    "permissionsGranted": {
+        "message": "Wymagane uprawnienia zostały przyznane.",
+        "description": "Komunikat o przyznaniu uprawnień"
+    },
+    "permissionsDenied": {
+        "message": "Nie przyznano uprawnień. Rozszerzenie może nie działać prawidłowo.",
+        "description": "Komunikat o odmowie uprawnień"
+    },
+    "permissionsError": {
+        "message": "Nie udało się poprosić o uprawnienia. Spróbuj ponownie.",
+        "description": "Błąd podczas żądania uprawnień"
     },
     "contactText": {
         "message": "E-mail • GitHub",

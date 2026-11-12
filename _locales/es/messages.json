@@ -7,6 +7,10 @@
         "message": "Guarda imágenes rápidamente desde la página actual.",
         "description": "Descripción de la extensión"
     },
+    "versionLabel": {
+        "message": "Versión:",
+        "description": "Etiqueta de la versión de la extensión"
+    },
     "optionsPageTitle": {
         "message": "Configuración",
         "description": "Título de la página de configuración"
@@ -90,6 +94,34 @@
     "aboutText": {
         "message": "Desarrollado por Viloris",
         "description": "Texto de la sección Acerca de"
+    },
+    "permissionsNote": {
+        "message": "Se necesitan permisos adicionales para usar PicDownloader en sitios web.",
+        "description": "Explicación de los permisos necesarios"
+    },
+    "permissionsHeader": {
+        "message": "Permitir guardar en sitios web",
+        "description": "Título de la sección de permisos"
+    },
+    "grantPermissions": {
+        "message": "Permitir",
+        "description": "Botón para solicitar permisos"
+    },
+    "permissionsGrantedHeader": {
+        "message": "Permisos",
+        "description": "Título de los permisos concedidos"
+    },
+    "permissionsGranted": {
+        "message": "Se han concedido los permisos necesarios.",
+        "description": "Mensaje cuando se conceden los permisos"
+    },
+    "permissionsDenied": {
+        "message": "No se concedieron los permisos. Es posible que la extensión no funcione correctamente.",
+        "description": "Mensaje cuando se deniegan los permisos"
+    },
+    "permissionsError": {
+        "message": "No se pudieron solicitar los permisos. Inténtalo de nuevo.",
+        "description": "Error al solicitar permisos"
     },
     "contactText": {
         "message": "Correo • GitHub",
