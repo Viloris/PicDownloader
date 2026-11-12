@@ -75,6 +75,10 @@
         "message": "✅ Beállítások elmentve!",
         "description": "Állapot üzenet beállítások mentése után"
     },
+    "settingsStorageError": {
+        "message": "A beállítások nem érhetők el. Próbáld újra.",
+        "description": "Beállítások tárolójának hibája"
+    },
     "defaultsRestored": {
         "message": "✅ Alapértelmezett beállítások visszaállítva!",
         "description": "Állapot üzenet alapértelmezett visszaállítása után"
@@ -128,7 +132,7 @@
         "description": "Option for right click"
     },
     "bothClickOption": {
-        "message": "Középső gomb",
-        "description": "Option for middle/both clicks"
+        "message": "Bal vagy jobb gomb",
+        "description": "Bal vagy jobb egérgomb"
     }
 }

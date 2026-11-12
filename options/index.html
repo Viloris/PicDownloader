@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PicDownloader</title>
+  <link rel="stylesheet" href="styles/settings.css">
+  <script src="../config.js" defer></script>
+  <script src="components/SettingsPage.js" defer></script>
+</head>
+<body>
+  <div class="optionsPage">
+    <nav class="sideBar" aria-label="PicDownloader">
+      <div class="titleContainer"><span class="logoTitle">PicDownloader</span></div>
+      <ul>
+        <li class="sideBarItem selected"><a href="#settings" data-message="optionsPageTitle"></a></li>
+        <li class="sideBarItem"><a href="#about" data-message="aboutHeader"></a></li>
+      </ul>
+    </nav>
+
+    <main class="contentsArea">
+      <section id="settings">
+        <h1 class="contentTitle" data-message="optionsPageTitle"></h1>
+        <hr>
+        <form id="settingsForm">
+          <fieldset id="settingsFields" disabled>
+            <section class="categoryContainer">
+              <h2 class="categoryTitle" data-message="saveLocationHeader"></h2>
+              <div class="categoryElements">
+                <div class="optionElement">
+                  <div class="optionText">
+                    <label for="folder" data-message="folderLabel"></label>
+                    <p class="caption" id="folderNote" data-message="folderNote"></p>
+                  </div>
+                  <div class="optionForm"><input type="text" id="folder" aria-describedby="folderNote"></div>
+                </div>
+              </div>
+            </section>
+            <section class="categoryContainer">
+              <h2 class="categoryTitle" data-message="filenameConflictHeader"></h2>
+              <div class="categoryElements">
+                <div class="optionElement">
+                  <div class="optionText">
+                    <label for="conflict" data-message="conflictLabel"></label>
+                    <p class="caption" id="conflictNote" data-message="conflictNote"></p>
+                  </div>
+                  <div class="optionForm"><input type="checkbox" id="conflict" aria-describedby="conflictNote"></div>
+                </div>
+              </div>
+            </section>
+            <section class="categoryContainer">
+              <h2 class="categoryTitle" data-message="smallImageFilterHeader"></h2>
+              <div class="categoryElements">
+                <div class="optionElement">
+                  <div class="optionText">
+                    <label for="minWidth" data-message="minWidthLabel"></label>
+                    <p class="caption" id="minWidthNote" data-message="minWidthNote"></p>
+                  </div>
+                  <div class="optionForm"><input type="number" id="minWidth" min="1" step="1" required aria-describedby="minWidthNote"></div>
+                </div>
+              </div>
+            </section>
+            <section class="categoryContainer">
+              <h2 class="categoryTitle" data-message="buttonDisplayHeader"></h2>
+              <div class="categoryElements">
+                <div class="optionElement">
+                  <div class="optionText">
+                    <label for="showButtons" data-message="buttonDisplayLabel"></label>
+                    <p class="caption" id="buttonDisplayNote" data-message="buttonDisplayNote"></p>
+                  </div>
+                  <div class="optionForm"><input type="checkbox" id="showButtons" aria-describedby="buttonDisplayNote"></div>
+                </div>
+              </div>
+            </section>
+            <section class="categoryContainer">
+              <h2 class="categoryTitle" data-message="modifierHeader"></h2>
+              <div class="categoryElements">
+                <div class="optionElement">
+                  <div class="optionText">
+                    <label for="modifierKey" data-message="modifierLabel"></label>
+                    <p class="caption" id="modifierNote" data-message="modifierNote"></p>
+                  </div>
+                  <div class="optionForm">
+                    <select id="modifierKey" aria-describedby="modifierNote">
+                      <option value="ctrl">Ctrl</option><option value="alt">Alt</option><option value="shift">Shift</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="optionElement">
+                  <div class="optionText"><label for="clickButton" data-message="buttonLabel"></label></div>
+                  <div class="optionForm">
+                    <select id="clickButton">
+                      <option value="left" data-message="leftClickOption"></option>
+                      <option value="right" data-message="rightClickOption"></option>
+                      <option value="both" data-message="bothClickOption"></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="actions">
+              <button type="submit" data-message="saveButton"></button>
+              <button type="button" id="restoreDefaults" data-message="restoreDefaultsButton"></button>
+            </div>
+          </fieldset>
+          <p id="statusMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section id="about" hidden>
+        <h1 class="contentTitle" data-message="aboutHeader"></h1>
+        <hr>
+        <p data-message="aboutText"></p>
+        <p id="contactText"></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

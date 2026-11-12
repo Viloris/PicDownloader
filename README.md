@@ -7,7 +7,7 @@ A small, configurable browser extension to quickly save images from web pages. P
 - Quick image saving with a modifier key + click or via on-image download buttons.
 - Filename conflict handling: `uniquify` or `overwrite`.
 - Filter by minimum image width.
-- Options page for configuration (`options.html`).
+- Options page for configuration (`options/index.html`).
 - Localization support in the `_locales/` folder.
 
 **Installation (for developers)**
@@ -31,7 +31,7 @@ web-ext build --overwrite-dest
 
 - Hold the configured modifier key (default: `ctrl`) and click the image with the configured mouse button (default: left) to download quickly.
 - If enabled, click the download buttons that appear over images.
-- Edit options via the Options page (`options.html`).
+- Edit options via the Options page (`options/index.html`).
 
 **Configuration**
 Default settings live in `config.js`. Common options:

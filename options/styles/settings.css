@@ -1,0 +1,107 @@
+:root {
+  color-scheme: light dark;
+  --main-text: #172033;
+  --sub-text: #64748b;
+  --line: #e2e8f0;
+  --button: #cbd5e1;
+  --highlight: #2563eb;
+  --highlight-bg: #eff6ff;
+  --main-bg: #ffffff;
+  --sub-bg: #f8fafc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text: #e2e8f0;
+    --sub-text: #94a3b8;
+    --line: #293548;
+    --button: #475569;
+    --highlight: #60a5fa;
+    --highlight-bg: #172b46;
+    --main-bg: #0f172a;
+    --sub-bg: #111c30;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+
+.optionsPage {
+  box-sizing: border-box;
+  max-width: 1120px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px 40px;
+  font: 15px/1.5 "Segoe UI", "San Francisco", "Ubuntu", "Fira Sans", "Roboto", Arial, sans-serif;
+}
+
+.sideBar {
+  position: fixed;
+  top: 28px;
+  width: 190px;
+  text-align: end;
+}
+
+.titleContainer { padding: 10px 12px 20px; }
+.logoTitle { font-size: 13px; font-weight: 500; color: var(--sub-text); }
+.sideBar ul { padding: 0; margin: 0; list-style: none; }
+.sideBar a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 9px;
+  color: var(--sub-text);
+  text-decoration: none;
+}
+.sideBar a:hover, .sideBar a:focus-visible, .sideBarItem.selected a {
+  color: var(--highlight);
+  background: var(--highlight-bg);
+}
+.sideBarItem.selected a { font-weight: 600; }
+
+.contentsArea { box-sizing: border-box; max-width: 760px; margin-inline-start: 220px; padding: 8px 0 40px; }
+.contentTitle { font-size: 28px; font-weight: 650; line-height: 1.35; margin: 0 0 20px; }
+hr { height: 1px; border: 0; background: var(--line); margin: 22px 0; }
+fieldset { padding: 0; margin: 0; border: 0; }
+.categoryTitle { font-size: 14px; font-weight: 650; margin: 0 0 6px; }
+.categoryElements { padding: 8px 18px; margin-bottom: 24px; border-inline-start: 2px solid var(--line); }
+.optionElement { display: flex; justify-content: space-between; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.optionText { flex: 1; min-width: 0; }
+.caption { margin: 0; font-size: 13px; color: var(--sub-text); }
+.optionForm { display: flex; align-items: center; justify-content: flex-end; }
+input, select, button { font: inherit; color: var(--main-text); }
+input[type="text"], input[type="number"], select {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 3px 6px;
+  border: 1px solid var(--button);
+  border-radius: 8px;
+  background: var(--main-bg);
+}
+input[type="text"] { width: 200px; max-width: 100%; }
+input[type="number"] { width: 80px; }
+input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--highlight); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+button {
+  padding: 6px 12px;
+  border: 1px solid var(--button);
+  border-radius: 8px;
+  background: var(--sub-bg);
+  cursor: pointer;
+}
+button:hover { color: var(--highlight); border-color: var(--highlight); background: var(--highlight-bg); }
+:focus-visible { outline: 2px solid var(--highlight); outline-offset: 2px; }
+#statusMessage { min-height: 1.5em; }
+#statusMessage.error { color: #d33; }
+a { color: var(--highlight); }
+
+@media (max-width: 720px) {
+  .optionsPage { padding: 20px; }
+  .sideBar { position: static; width: auto; margin-bottom: 20px; text-align: start; }
+  .titleContainer { padding: 0 12px 10px; }
+  .sideBar ul { display: flex; flex-wrap: wrap; gap: 4px; }
+  .contentsArea { max-width: none; margin-inline-start: 0; }
+  .optionElement { flex-wrap: wrap; }
+}

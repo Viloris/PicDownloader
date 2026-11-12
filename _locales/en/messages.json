@@ -75,6 +75,10 @@
         "message": "✅ Settings saved!",
         "description": "Status message after saving settings"
     },
+    "settingsStorageError": {
+        "message": "Could not access settings. Please try again.",
+        "description": "Error accessing settings storage"
+    },
     "defaultsRestored": {
         "message": "✅ Default settings restored!",
         "description": "Status message after restoring defaults"
@@ -128,7 +132,7 @@
         "description": "Option for right click"
     },
     "bothClickOption": {
-        "message": "Middle clicks",
-        "description": "Option for middle/both clicks"
+        "message": "Left or right click",
+        "description": "Option for left or right click"
     }
 }

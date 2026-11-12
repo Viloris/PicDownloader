@@ -13,7 +13,7 @@ window.PicDownloaderConfig = {
     },
     CONTACT: {
         EMAIL: 'vilorisdeveloper@gmail.com',
-        GITHUB: 'https://github.com/yourusername/image-saver',
+        GITHUB: 'https://github.com/Viloris/PicDownloader',
         EMAIL_LABEL: 'Email',
         GITHUB_LABEL: 'GitHub',
         TARGET: '_blank',
